@@ -32,20 +32,59 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     ),
-    ListTile(
-      title: Text("Matematik"),
-      trailing: Icon(Icons.keyboard_arrow_up),
-      onTap: () {},
+    ExpansionTile(
+      title: Text(
+        "Matematik",
+        style: TextStyle(fontSize: 18),
+      ),
+      children: <Widget>[
+        ListTile(
+          title: Text("Matematik 1"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+        ListTile(
+          title: Text("Matematik 2"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+      ],
     ),
-    ListTile(
-      title: Text("Fysik"),
-      trailing: Icon(Icons.keyboard_arrow_up),
-      onTap: () {},
+    ExpansionTile(
+      title: Text(
+        "Fysik",
+        style: TextStyle(fontSize: 18),
+      ),
+      children: <Widget>[
+        ListTile(
+          title: Text("Fysik 1"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+        ListTile(
+          title: Text("Fysik 2"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+      ],
     ),
-    ListTile(
-      title: Text("Kemi"),
-      trailing: Icon(Icons.keyboard_arrow_up),
-      onTap: () {},
+    ExpansionTile(
+      title: Text(
+        "Kemi",
+        style: TextStyle(fontSize: 18),
+      ),
+      children: <Widget>[
+        ListTile(
+          title: Text("Kemi 1"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+        ListTile(
+          title: Text("Kemi 2"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          onTap: () {},
+        ),
+      ],
     )
   ];
 
