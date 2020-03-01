@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tex/flutter_tex.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -101,9 +102,9 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.class_), title: Text("Samlingar")),
+              icon: Icon(Icons.import_contacts), title: Text("Utforska")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.import_contacts), title: Text("Utforska"))
+              icon: Icon(Icons.class_), title: Text("Samlingar")),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.redAccent,
@@ -119,10 +120,30 @@ class Utforska extends StatefulWidget {
 }
 
 class _UtforskaState extends State<Utforska> {
+  final String _html = r"""
+  <p>
+      A simple Example to render \( \rm\TeX \) in flutter with full <B>HTML</B> support<br><br>
+  
+      When \(a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  
+      $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$<br>
+      
+
+      <b>Optiska instrument</b><br><br>
+      $$G = {s \over f}$$<br>
+      $$G = {f_1 \over f_2}$$<br>
+      \(G=\frac{f_{1}}{f_{2}}\)<br>
+      \(G=\frac{s \cdot L}{f_{1} \cdot f_{2}}\)
+  </p>
+     """;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("SecondPage"),
+      child: TeXView(
+        teXHTML: _html,
+        renderingEngine: RenderingEngine.Katex,
+      ),
     );
   }
 }
