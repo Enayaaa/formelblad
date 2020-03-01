@@ -121,19 +121,15 @@ class Utforska extends StatefulWidget {
 
 class _UtforskaState extends State<Utforska> {
   final String _html = r"""
-  <p>
-      A simple Example to render \( \rm\TeX \) in flutter with full <B>HTML</B> support<br><br>
-  
-      When \(a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  
-      $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$<br>
-      
-
-      <b>Optiska instrument</b><br><br>
-      $$G = {s \over f}$$<br>
-      $$G = {f_1 \over f_2}$$<br>
-      \(G=\frac{f_{1}}{f_{2}}\)<br>
-      \(G=\frac{s \cdot L}{f_{1} \cdot f_{2}}\)
+    <p>
+  Kommutativa lagen vid addition och multiplikation<br>
+  \(a+b=b+a\)<br>
+  \(ab=ba\)<br><br>
+  Associativa lagen vid addition och multiplikation<br>
+  \((a+b)+c=a+(b+c)\)<br>
+  \((ab) \cdot c = a \cdot (bc)\)<br><br>
+  Distributiva lagen<br>
+  \(a(b+c) = ab+ac\)
   </p>
      """;
 

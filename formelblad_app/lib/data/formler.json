@@ -1,30 +1,21 @@
 {
     "matematik": {
         "formler": {
-            "Algebra": {
-                "Räknelagar": [
-
-                ]
-            }
+            "Algebra": [
+                {
+                    "titel": "Räknelagar",
+                    "body": "r\"\"\"<p>\r\n  Kommutativa lagen vid addition och multiplikation<br>\r\n  \\(a+b=b+a\\)<br>\r\n  \\(ab=ba\\)<br><br>\r\n  Associativa lagen vid addition och multiplikation<br>\r\n  \\((a+b)+c=a+(b+c)\\)<br>\r\n  \\((ab) \\cdot c = a \\cdot (bc)\\)<br><br>\r\n  Distributiva lagen<br>\r\n  \\(a(b+c) = ab+ac\\)\r\n  <\/p>\"\"\""
+                }
+            ]
         },
-        "tabeller": {
-
-        }
+        "tabeller": {}
     },
     "fysik": {
-        "formler": {
-
-        },
-        "tabeller": {
-
-        }
+        "formler": {},
+        "tabeller": {}
     },
     "kemi": {
-        "formler": {
-
-        },
-        "tabeller": {
-
-        }
+        "formler": {},
+        "tabeller": {}
     }
 }
