@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_tex/flutter_tex.dart';
+import 'dart:convert';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -88,6 +90,22 @@ class _HomePageState extends State<HomePage> {
       ],
     )
   ];
+
+  Future<String> _loadJson() async {
+    String _jsonString = await rootBundle.loadString("lib/data/formler.json");
+    Map<String, dynamic> jsonMap = json.decode(_jsonString);
+
+    print(jsonMap["matematik"].hashCode);
+    return "Hello";
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      _loadJson();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
