@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formelblad_app/homepage.dart';
 
-void main() async => runApp(MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
