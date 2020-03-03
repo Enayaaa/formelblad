@@ -1,4 +1,8 @@
-{
+import 'dart:convert';
+
+final Map<String, dynamic> data = jsonDecode(jsonData);
+
+const jsonData = r"""{
     "matematik": {
         "formler": {
             "Algebra": [
@@ -113,4 +117,4 @@
         "formler": {},
         "tabeller": {}
     }
-}
+}""";

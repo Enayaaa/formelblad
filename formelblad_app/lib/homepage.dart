@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_tex/flutter_tex.dart';
-import 'dart:convert';
+import 'package:formelblad_app/bottomnavbarutforska.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -91,21 +89,29 @@ class _HomePageState extends State<HomePage> {
     )
   ];
 
-  Future<String> _loadJson() async {
-    String _jsonString = await rootBundle.loadString("lib/data/formler.json");
-    Map<String, dynamic> jsonMap = json.decode(_jsonString);
+/*
+  List<Formel> _formler = List<Formel>();
 
-    print(jsonMap["matematik"].hashCode);
-    return "Hello";
+  List<Formel> fetchFormler(String amne, String kategori) {
+    var formler = List<Formel>();
+
+    var formlerJson = data[amne]["formler"][kategori][0]["body"];
+    for (var formelJson in formlerJson) {
+      formler.add(Formel.fromJson(formelJson));
+    }
+
+    return formler;
   }
 
   @override
   void initState() {
-    super.initState();
     setState(() {
-      _loadJson();
+      _formler = fetchFormler("matematik", "Algebra");
+      print(_formler);
     });
+    super.initState();
   }
+*/
 
   @override
   Widget build(BuildContext context) {
@@ -128,47 +134,6 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: Colors.redAccent,
         onTap: _onBottomItemTapped,
       ),
-    );
-  }
-}
-
-class Utforska extends StatefulWidget {
-  @override
-  _UtforskaState createState() => _UtforskaState();
-}
-
-class _UtforskaState extends State<Utforska> {
-  final String _html = r"""
-    <p>
-  Kommutativa lagen vid addition och multiplikation<br>
-  \(a+b=b+a\)<br>
-  \(ab=ba\)<br><br>
-  Associativa lagen vid addition och multiplikation<br>
-  \((a+b)+c=a+(b+c)\)<br>
-  \((ab) \cdot c = a \cdot (bc)\)<br><br>
-  Distributiva lagen<br>
-  \(a(b+c) = ab+ac\)
-  </p>
-     """;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: TeXView(
-        teXHTML: _html,
-        renderingEngine: RenderingEngine.Katex,
-      ),
-    );
-  }
-}
-
-class Samlingar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[Text("Hello home page")],
     );
   }
 }
