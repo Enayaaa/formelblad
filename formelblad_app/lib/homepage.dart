@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formelblad_app/bottomnavbarutforska.dart';
+import 'package:formelblad_app/globals.dart' as globals;
+import 'package:formelblad_app/styles.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -19,99 +21,85 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // Methods for Drawer
-  List<Widget> _kategorier = <Widget>[
-    DrawerHeader(
-      decoration: BoxDecoration(
-        color: Colors.redAccent,
-      ),
-      child: Text(
-        'Sök bland kategorier',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 24,
-        ),
-      ),
-    ),
-    ExpansionTile(
-      title: Text(
-        "Matematik",
-        style: TextStyle(fontSize: 18),
-      ),
-      children: <Widget>[
-        ListTile(
-          title: Text("Matematik 1"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-        ListTile(
-          title: Text("Matematik 2"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-      ],
-    ),
-    ExpansionTile(
-      title: Text(
-        "Fysik",
-        style: TextStyle(fontSize: 18),
-      ),
-      children: <Widget>[
-        ListTile(
-          title: Text("Fysik 1"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-        ListTile(
-          title: Text("Fysik 2"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-      ],
-    ),
-    ExpansionTile(
-      title: Text(
-        "Kemi",
-        style: TextStyle(fontSize: 18),
-      ),
-      children: <Widget>[
-        ListTile(
-          title: Text("Kemi 1"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-        ListTile(
-          title: Text("Kemi 2"),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          onTap: () {},
-        ),
-      ],
-    )
-  ];
-
-/*
-  List<Formel> _formler = List<Formel>();
-
-  List<Formel> fetchFormler(String amne, String kategori) {
-    var formler = List<Formel>();
-
-    var formlerJson = data[amne]["formler"][kategori][0]["body"];
-    for (var formelJson in formlerJson) {
-      formler.add(Formel.fromJson(formelJson));
-    }
-
-    return formler;
-  }
+  // Drawer
+  bool _darktheme;
 
   @override
   void initState() {
-    setState(() {
-      _formler = fetchFormler("matematik", "Algebra");
-      print(_formler);
-    });
+    _darktheme = globals.prefs.getBool("darktheme") ?? false;
     super.initState();
   }
-*/
+
+  void setSettings(String pref, bool value) async {
+    globals.prefs.setBool(pref, value);
+  }
+
+  bool systemDarkOn() {
+    return MediaQuery.of(context).platformBrightness.toString() ==
+            Brightness.dark.toString()
+        ? true
+        : false;
+  }
+
+  Widget _drawer(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        DrawerHeader(
+          decoration: BoxDecoration(
+            color: Colors.redAccent,
+          ),
+          child: Text(
+            'Inställningar',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+            ),
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(2),
+            color: Color(0xFF222222),
+          ),
+          child: SwitchListTile(
+            title: Text("Dark theme"),
+            value: systemDarkOn() ? true : _darktheme,
+            onChanged: systemDarkOn()
+                ? null
+                : (bool value) {
+                    setState(() {
+                      _darktheme = value;
+                      globals.darkMode = _darktheme;
+                      globals.prefs.setBool("darktheme", value);
+                      themeBloc.changeTheme(value);
+                    });
+                  },
+          ),
+        ),
+        SizedBox(height: 5),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(2),
+            color: Color(0xFF222222),
+          ),
+          child: SwitchListTile(
+            title: Text("Dark theme"),
+            value: systemDarkOn() ? true : _darktheme,
+            onChanged: systemDarkOn()
+                ? null
+                : (bool value) {
+                    setState(() {
+                      _darktheme = value;
+                      globals.darkMode = _darktheme;
+                      globals.prefs.setBool("darktheme", value);
+                      themeBloc.changeTheme(value);
+                    });
+                  },
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +109,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(child: _bottomNavOptions.elementAt(_selectedIndex)),
       drawer: Drawer(
-        child: ListView(children: _kategorier),
+        child: _drawer(context),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

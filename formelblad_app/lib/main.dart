@@ -1,17 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:formelblad_app/homepage.dart';
+import 'package:formelblad_app/styles.dart';
+import 'package:formelblad_app/globals.dart' as globals;
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  globals.prefs = await SharedPreferences.getInstance();
+  bool theme = globals.prefs.getBool("darktheme") ?? false;
+  runApp(MyApp(useDark: theme));
+}
 
 class MyApp extends StatelessWidget {
+  final bool useDark;
+
+  MyApp({Key key, @required this.useDark}) : super(key: key);
+
+  final ThemeData lightTheme =
+      ThemeData(primarySwatch: Colors.red, brightness: Brightness.light);
+
+  final ThemeData darkTheme = ThemeData(
+    primarySwatch: Colors.red,
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: Colors.black, //backgroubd color
+    canvasColor: Color(0xFF121212), //bottomnavbar bgcolor
+    
+  );
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Formelblad',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: HomePage(),
+    return StreamBuilder(
+      stream: themeBloc.darkThemeEnabled,
+      initialData: useDark ? true : false,
+      builder: (context, snapshot) {
+        return MaterialApp(
+          title: 'Formelblad',
+          theme: snapshot.data ? darkTheme : lightTheme,
+          darkTheme: darkTheme,
+          home: HomePage(),
+        );
+      },
     );
   }
 }
