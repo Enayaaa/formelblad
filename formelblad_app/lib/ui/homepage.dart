@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:formelblad_app/bottomnavbarutforska.dart';
-import 'package:formelblad_app/globals.dart' as globals;
-import 'package:formelblad_app/styles.dart';
+import 'package:formelblad_app/ui/bottomnavbarutforska.dart';
+import 'package:formelblad_app/ui/globals.dart' as globals;
+import 'package:formelblad_app/ui/styles.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -26,7 +26,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    _darktheme = globals.prefs.getBool("darktheme") ?? false;
+    _darktheme =
+        isThemeDark() ?? false; // function isThemeDark is from styles.dart
     super.initState();
   }
 
@@ -46,7 +47,9 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         DrawerHeader(
           decoration: BoxDecoration(
-            color: Colors.redAccent,
+            color: isThemeDark()
+                ? StylesDark.drawerHeaderColor
+                : StylesLight.drawerHeaderColor,
           ),
           child: Text(
             'Inställningar',
@@ -56,47 +59,32 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(2),
-            color: Color(0xFF222222),
-          ),
-          child: SwitchListTile(
-            title: Text("Dark theme"),
-            value: systemDarkOn() ? true : _darktheme,
-            onChanged: systemDarkOn()
-                ? null
-                : (bool value) {
-                    setState(() {
-                      _darktheme = value;
-                      globals.darkMode = _darktheme;
-                      globals.prefs.setBool("darktheme", value);
-                      themeBloc.changeTheme(value);
-                    });
-                  },
+        Padding(
+          padding: EdgeInsets.only(left: 5, right: 5),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: isThemeDark()
+                  ? StylesDark.cardBGColor
+                  : StylesLight.cardBGColor,
+            ),
+            child: SwitchListTile(
+              title: Text("Dark theme"),
+              value: systemDarkOn() ? true : _darktheme,
+              onChanged: systemDarkOn()
+                  ? null
+                  : (bool value) {
+                      setState(() {
+                        _darktheme = value;
+                        globals.darkMode = _darktheme;
+                        globals.prefs.setBool("darktheme", value);
+                        themeBloc.changeTheme(value);
+                      });
+                    },
+            ),
           ),
         ),
         SizedBox(height: 5),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(2),
-            color: Color(0xFF222222),
-          ),
-          child: SwitchListTile(
-            title: Text("Dark theme"),
-            value: systemDarkOn() ? true : _darktheme,
-            onChanged: systemDarkOn()
-                ? null
-                : (bool value) {
-                    setState(() {
-                      _darktheme = value;
-                      globals.darkMode = _darktheme;
-                      globals.prefs.setBool("darktheme", value);
-                      themeBloc.changeTheme(value);
-                    });
-                  },
-          ),
-        ),
       ],
     );
   }
@@ -116,10 +104,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.import_contacts), title: Text("Utforska")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.class_), title: Text("Samlingar")),
+              icon: Icon(Icons.bookmark), title: Text("Samlingar")),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.redAccent,
+        //selectedItemColor: Colors.redAccent,
         onTap: _onBottomItemTapped,
       ),
     );
