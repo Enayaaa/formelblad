@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:formelblad_app/data/formler.dart';
 import 'package:formelblad_app/ui/styles.dart';
+import 'globals.dart' as globals;
 
 class Utforska extends StatefulWidget {
   @override
-  _UtforskaState createState() => _UtforskaState();
-}
+  Utforska({Key key}) : super(key: key);
 
-class _UtforskaState extends State<Utforska> {
-    static String _createHtml() {
+  static String _createHtml() {
     String _html = "";
-    _html += isThemeDark()
+    _html += globals.isDarkMode
         ? r"""<style>
         body {
             background-color: black;
@@ -19,6 +18,7 @@ class _UtforskaState extends State<Utforska> {
         }
     </style>"""
         : "";
+
     List myArray = data["matematik"]["formler"]["Algebra"][0]["body"];
 
     for (int i = 0; i < myArray.length; i++) {
@@ -34,25 +34,73 @@ class _UtforskaState extends State<Utforska> {
     return _html;
   }
 
-  String _html = _createHtml();
+  @override
+  _UtforskaState createState() => _UtforskaState();
+}
 
-  /* Container(
-      child: TeXView(
-        teXHTML: _html,
-        renderingEngine: RenderingEngine.Katex,
-      ),
-    ); */
+class _UtforskaState extends State<Utforska> {
+  String _html = Utforska._createHtml();
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    List icons = [Icons.functions, Icons.toys, Icons.local_drink];
+    return ListView.separated(
+      itemCount: data.keys.length,
+      separatorBuilder: (BuildContext context, int index) =>
+          Divider(height: 2, thickness: 2),
+      itemBuilder: (BuildContext context, int index) {
+        String title = data.keys.elementAt(index).toUpperCase();
+        IconData icon = icons.elementAt(index);
+        return ListTile(
+          onTap: () {
+            buildPush(context, title);
+          },
+          title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
+          trailing: Icon(Icons.keyboard_arrow_right),
+          contentPadding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+          leading: CircleAvatar(child: Icon(icon)),
+        );
+      },
+    );
+  }
+
+  Future buildPush(BuildContext context, String title) {
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          body: Center(
+            child: Text(
+              title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+            ),
+          ),
+          appBar: AppBar(),
+        ),
+      ),
+    );
+  }
+}
+
+class Samlingar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[Text("Hello home page")],
+    );
+  }
+}
+
+/* ListView(
       children: <Widget>[
         SizedBox(height: 20),
         Padding(
           padding: EdgeInsets.only(left: 5, right: 5),
           child: Container(
             decoration: BoxDecoration(
-              color: isThemeDark()
+              color: globals.isDarkMode
                   ? StylesDark.cardBGColor
                   : StylesLight.cardBGColor,
               borderRadius: BorderRadius.circular(5),
@@ -69,7 +117,7 @@ class _UtforskaState extends State<Utforska> {
           padding: EdgeInsets.only(left: 5, right: 5),
           child: Container(
             decoration: BoxDecoration(
-              color: isThemeDark()
+              color: globals.isDarkMode
                   ? StylesDark.cardBGColor
                   : StylesLight.cardBGColor,
               borderRadius: BorderRadius.circular(5),
@@ -86,7 +134,7 @@ class _UtforskaState extends State<Utforska> {
           padding: EdgeInsets.only(left: 5, right: 5),
           child: Container(
             decoration: BoxDecoration(
-              color: isThemeDark()
+              color: globals.isDarkMode
                   ? StylesDark.cardBGColor
                   : StylesLight.cardBGColor,
               borderRadius: BorderRadius.circular(5),
@@ -99,17 +147,4 @@ class _UtforskaState extends State<Utforska> {
           ),
         ),
       ],
-    );
-  }
-}
-
-class Samlingar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[Text("Hello home page")],
-    );
-  }
-}
+    ); */
