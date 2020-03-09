@@ -26,6 +26,7 @@ class Utforska extends StatefulWidget {
       for (int j = 0; j < formelLista.length; j++) {
         html += "\$\$" + formelLista[j].toString() + "\$\$";
       }
+      html += "<br>";
     }
 
     return html;

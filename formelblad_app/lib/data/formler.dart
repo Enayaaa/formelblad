@@ -38,49 +38,59 @@ const jsonData = r"""{
                         ]
                     },
                     {
-                        "titel": "",
-                        "beskrivning": "",
+                        "titel": "Aritmetisk talföljd",
+                        "beskrivning": "Generella formler för aritmetisk talföljd",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "I en aritmetisk talföljd är differensen mellan varje par av efterföljande tal konstant.",
                                 "formler": [
-                                    ""
+                                    "a_n=a_1+(n-1)d",
+                                    "d=a_n-a_{n-1}"
                                 ]
                             }
                         ]
                     },
                     {
-                        "titel": "",
-                        "beskrivning": "",
+                        "titel": "Geometrisk summa",
+                        "beskrivning": "Summan för en geometrisk talföljd",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "Summan av en geometrisk talföljd där kvoten mellan varje par av efterföljande tal är konstant där \\(, k\\neq1\\)",
                                 "formler": [
-                                    ""
+                                    "s_n=a+ak+ak^2+...+ak^{n-1}=\\frac{a(k^n-1)}{k-1}"
                                 ]
                             }
                         ]
                     },
                     {
-                        "titel": "",
-                        "beskrivning": "",
+                        "titel": "Geometrisk talföljd",
+                        "beskrivning": "Generell formell för aritmetisk talföljd",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "I en geometrisk talföljd är kvoten mellan varje par av efterföljande tal konstant.",
                                 "formler": [
-                                    ""
+                                    "a_n=a_1\\cdot k^{n-1}"
                                 ]
                             }
                         ]
                     },
                     {
-                        "titel": "",
-                        "beskrivning": "",
+                        "titel": "Logaritmlagar",
+                        "beskrivning": "För lösning av exponetialekvationer",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "För \\(y > 0\\):",
                                 "formler": [
-                                    ""
+                                    "10^x=y\\Leftrightarrow x=lg\\,y",
+                                    "e^x=y \\Leftrightarrow x=ln\\, y"
+                                ]
+                            },
+                            {
+                                "kommentar": "För \\(y > 0\\) och \\(x > 0\\):",
+                                "formler": [
+                                    "lg\\, xy=lg\\, x+lg\\, y",
+                                    "lg \\frac{x}{y}=lg\\,x-lg\\, y",
+                                    "lg\\, x^p=p\\cdot lg\\, x"
                                 ]
                             }
                         ]
