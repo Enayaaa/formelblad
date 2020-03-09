@@ -29,7 +29,7 @@ class _InstallningarState extends State<Installningar> {
     return ListView(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.only(left: 5, right: 5),
+          padding: EdgeInsets.only(left: 5, right: 5, top: 20),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),

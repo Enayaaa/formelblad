@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:formelblad_app/data/formler.dart';
-import 'package:formelblad_app/ui/styles.dart';
 import 'globals.dart' as globals;
 
 class Utforska extends StatefulWidget {
   @override
   Utforska({Key key}) : super(key: key);
-
+  /*
   static String _createHtml() {
     String _html = "";
     _html += globals.isDarkMode
@@ -32,14 +31,14 @@ class Utforska extends StatefulWidget {
     }
 
     return _html;
-  }
+  } */
 
   @override
   _UtforskaState createState() => _UtforskaState();
 }
 
 class _UtforskaState extends State<Utforska> {
-  String _html = Utforska._createHtml();
+  // String _html = Utforska._createHtml();
 
   @override
   Widget build(BuildContext context) {
@@ -51,33 +50,38 @@ class _UtforskaState extends State<Utforska> {
       itemBuilder: (BuildContext context, int index) {
         String title = data.keys.elementAt(index).toUpperCase();
         IconData icon = icons.elementAt(index);
-        return ListTile(
-          onTap: () {
-            buildPush(context, title);
-          },
+
+        List<Widget> _getAmneChildren() {
+          List<Widget> list = [];
+
+          List mydata = data[title.toLowerCase()]["områden"] != null
+              ? data[title.toLowerCase()]["områden"]
+              : [];
+          int _length = mydata.length != null ? mydata.length : 0;
+
+          for (int i = 0; i < _length; i++) {
+            if (mydata[i]["titel"] != "") {
+              list.add(
+                ListTile(
+                  leading: Icon(Icons.home),
+                  title: Text(mydata[i]["titel"]),
+                ),
+              );
+            }
+          }
+          return list;
+        }
+
+        List<Widget> _amneChildren = _getAmneChildren();
+
+        return ExpansionTile(
           title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
-          trailing: Icon(Icons.keyboard_arrow_right),
-          contentPadding: EdgeInsets.fromLTRB(15, 5, 15, 5),
-          leading: CircleAvatar(child: Icon(icon)),
+          leading: CircleAvatar(
+            child: Icon(icon),
+          ),
+          children: _amneChildren,
         );
       },
-    );
-  }
-
-  Future buildPush(BuildContext context, String title) {
-    return Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Scaffold(
-          body: Center(
-            child: Text(
-              title,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
-            ),
-          ),
-          appBar: AppBar(),
-        ),
-      ),
     );
   }
 }
@@ -85,10 +89,8 @@ class _UtforskaState extends State<Utforska> {
 class Samlingar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[Text("Hello home page")],
+    return Center(
+      child: Text("Hello Samlingar page"),
     );
   }
 }

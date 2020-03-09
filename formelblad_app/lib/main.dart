@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
 
   MyApp({Key key, @required this.useDark}) : super(key: key);
 
-  final ThemeData lightTheme =
-      ThemeData(primarySwatch: Colors.red, brightness: Brightness.light);
+  final ThemeData lightTheme = ThemeData(
+    primarySwatch: Colors.red,
+    brightness: Brightness.light,
+  );
 
   final ThemeData darkTheme = ThemeData(
     primarySwatch: Colors.red,
