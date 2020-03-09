@@ -6,10 +6,10 @@ import 'globals.dart' as globals;
 class Utforska extends StatefulWidget {
   @override
   Utforska({Key key}) : super(key: key);
-  /*
-  static String _createHtml() {
-    String _html = "";
-    _html += globals.isDarkMode
+
+  static String _createHtml(Map data) {
+    String html = "";
+    html += globals.isDarkMode
         ? r"""<style>
         body {
             background-color: black;
@@ -17,29 +17,25 @@ class Utforska extends StatefulWidget {
         }
     </style>"""
         : "";
+    List formler = data["formler"];
 
-    List myArray = data["matematik"]["formler"]["Algebra"][0]["body"];
-
-    for (int i = 0; i < myArray.length; i++) {
-      _html += myArray[i]["kommentar"];
-      _html += "<br>";
-
-      for (int j = 0; j < myArray[i]["formler"].length; j++) {
-        _html += "\\(" + myArray[i]["formler"][j] + "\\)<br>";
+    for (int i = 0; i < formler.length; i++) {
+      html += formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
+      List formelLista =
+          formler[i]["formler"] != null ? formler[i]["formler"] : [];
+      for (int j = 0; j < formelLista.length; j++) {
+        html += "\$\$" + formelLista[j].toString() + "\$\$";
       }
-      _html += "<br>";
     }
 
-    return _html;
-  } */
+    return html;
+  }
 
   @override
   _UtforskaState createState() => _UtforskaState();
 }
 
 class _UtforskaState extends State<Utforska> {
-  // String _html = Utforska._createHtml();
-
   @override
   Widget build(BuildContext context) {
     List icons = [Icons.functions, Icons.toys, Icons.local_drink];
@@ -51,22 +47,84 @@ class _UtforskaState extends State<Utforska> {
         String title = data.keys.elementAt(index).toUpperCase();
         IconData icon = icons.elementAt(index);
 
-        List<Widget> _getAmneChildren() {
+        List<Widget> _getDelomraden(String amne, int omradeIndex) {
           List<Widget> list = [];
 
+          List mydata = data[amne]["områden"][omradeIndex]["delområden"];
+          int length = mydata.length != null ? mydata.length : 0;
+
+          for (int i = 0; i < length; i++) {
+            String _html = Utforska._createHtml(mydata[i]);
+
+            if (mydata[i]["titel"] != "") {
+              list.add(Divider(
+                height: 1,
+              ));
+              list.add(
+                Container(
+                  color: globals.isDarkMode
+                      ? Color(0xFF121212)
+                      : Color(0xFFEFEFEF),
+                  child: ListTile(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: Text(mydata[i]["titel"]),
+                              ),
+                              body: TeXView(
+                                teXHTML: _html,
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    },
+                    title: Text(mydata[i]["titel"]),
+                    subtitle: mydata[i]["beskrivning"] != ""
+                        ? Text(mydata[i]["beskrivning"])
+                        : null,
+                    trailing: Icon(Icons.launch),
+                    contentPadding: EdgeInsets.only(left: 25, right: 15),
+                  ),
+                ),
+              );
+            }
+          }
+
+          return list;
+        }
+
+        List<Widget> _getAmneChildren() {
+          List<Widget> list = [];
           List mydata = data[title.toLowerCase()]["områden"] != null
               ? data[title.toLowerCase()]["områden"]
               : [];
           int _length = mydata.length != null ? mydata.length : 0;
 
+          list.add(Divider(height: 1));
+
           for (int i = 0; i < _length; i++) {
+            List<Widget> _delomraden = _getDelomraden(title.toLowerCase(), i);
+
             if (mydata[i]["titel"] != "") {
               list.add(
-                ListTile(
-                  leading: Icon(Icons.home),
-                  title: Text(mydata[i]["titel"]),
+                Padding(
+                  padding: EdgeInsets.only(left: 20, right: 10),
+                  child: ExpansionTile(
+                    title: Text(
+                      mydata[i]["titel"],
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                    ),
+                    children: _delomraden,
+                  ),
                 ),
               );
+              list.add(Divider(height: 1));
             }
           }
           return list;
@@ -75,9 +133,14 @@ class _UtforskaState extends State<Utforska> {
         List<Widget> _amneChildren = _getAmneChildren();
 
         return ExpansionTile(
-          title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
+          title: Text(title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
           leading: CircleAvatar(
-            child: Icon(icon),
+            backgroundColor: Colors.red,
+            child: Icon(
+              icon,
+              color: globals.isDarkMode ? Colors.black : Colors.white,
+            ),
           ),
           children: _amneChildren,
         );
