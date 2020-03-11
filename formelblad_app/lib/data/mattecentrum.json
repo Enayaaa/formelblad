@@ -210,7 +210,7 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(x^a\\) d\u00E4r \\(a\\) \u00E4r ett reellt tal<\/td><td>&nbsp;\\(ax^{a-1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)<\/td><td>&nbsp;\\(a^x\\ln a\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)<\/td><td>&nbsp;\\(\\frac{1}{x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(k \\cdot e^{kx}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)<\/td><td>&nbsp;\\(-\\frac{1}{x^2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(\\cos x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(-\\sin x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\tan x\\)<\/td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)<\/td><td>&nbsp;\\(f'(x)+g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 style=\"border-left: 9px solid rgb(62, 111, 144); padding-left: 5px;\">Produktregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(f(x)\\cdot g(x)\\)<\/td><td>&nbsp;\\(f'(x)\\cdot g(x)+f(x)\\cdot g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 style=\"border-left: 9px solid rgb(62, 111, 144); padding-left: 5px;\">Kvotregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{f(x)}{g(x)}\\) \\((g(x)\\neq0)\\)<\/td><td>&nbsp;\\(\\frac{f'(x)\\cdot g(x)-f(x)\\cdot g'(x)}{(g(x))^2}\\)<\/td><\/tr><\/tbody> <\/table>",
+                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(x^a\\) d\u00E4r \\(a\\) \u00E4r ett reellt tal<\/td><td>&nbsp;\\(ax^{a-1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)<\/td><td>&nbsp;\\(a^x\\ln a\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)<\/td><td>&nbsp;\\(\\frac{1}{x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(k \\cdot e^{kx}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)<\/td><td>&nbsp;\\(-\\frac{1}{x^2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(\\cos x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(-\\sin x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\tan x\\)<\/td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)<\/td><td>&nbsp;\\(f'(x)+g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 >Produktregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(f(x)\\cdot g(x)\\)<\/td><td>&nbsp;\\(f'(x)\\cdot g(x)+f(x)\\cdot g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 >Kvotregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{f(x)}{g(x)}\\) \\((g(x)\\neq0)\\)<\/td><td>&nbsp;\\(\\frac{f'(x)\\cdot g(x)-f(x)\\cdot g'(x)}{(g(x))^2}\\)<\/td><\/tr><\/tbody> <\/table><br>",
                                 "formler": [
                                     ""
                                 ]
@@ -269,7 +269,7 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(k\\)<\/td><td>&nbsp;\\(kx+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(x^n (n\\neq -1)\\)<\/td><td>&nbsp;\\(\\frac{x^{n+1}}{n+1}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\, (x \\neq 0)\\)<\/td><td>&nbsp;\\(\\ln |x|+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(\\frac{e^{kx}}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x \\,(a>0;a\\neq1)\\)<\/td><td>&nbsp;\\(\\frac{a^x}{\\ln a}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(-\\cos x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(\\sin x+ C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin kx\\)<\/td><td>&nbsp;\\(\\frac{-\\cos kx}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos kx\\)<\/td><td>&nbsp;\\(\\frac{\\sin kx}{k}+C\\)<\/td><\/tr><\/tbody> <\/table>",
+                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(k\\)<\/td><td>&nbsp;\\(kx+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(x^n (n\\neq -1)\\)<\/td><td>&nbsp;\\(\\frac{x^{n+1}}{n+1}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\, (x \\neq 0)\\)<\/td><td>&nbsp;\\(\\ln |x|+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(\\frac{e^{kx}}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x \\,(a>0;a\\neq1)\\)<\/td><td>&nbsp;\\(\\frac{a^x}{\\ln a}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(-\\cos x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(\\sin x+ C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin kx\\)<\/td><td>&nbsp;\\(\\frac{-\\cos kx}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos kx\\)<\/td><td>&nbsp;\\(\\frac{\\sin kx}{k}+C\\)<\/td><\/tr><\/tbody> <\/table><br>",
                                 "formler": [
                                     ""
                                 ]
@@ -287,7 +287,22 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "<h3>Integralkalkylens fundamentalsats<\/h3>\r\nOm en funktion \\(f\\) \u00E4r kontinuerlig i intervallet \\(a\\leq x \\leq b\\) och \\(F\\) \u00E4r en primitiv funktion till \\(f\\) (dvs. \\(F'(x)=f(x))\\), s\u00E5 g\u00E4ller sambandet:",
+                                "formler": [
+                                    "\\int^b_a f (x) dx=[F(x)]^b_a=F(b)-F(a)"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Integrationregler</h3>\\(k\\) = en konstant",
+                                "formler": [
+                                    "\\int^b_a k \\cdot f(x) dx= k \\cdot \\int^b_a f(x)dx",
+                                    "\\int^c_a f(x) dx= \\int^b_a f(x) dx + \\int^c_b f(x)dx",
+                                    "\\int^b_a (f(x)+g(x))dx=\\int^b_a f(x)dx + \\int^b_a g(x)dx",
+                                    "\\int^b_a (f(x)-g(x))dx=\\int^b_a f(x)dx - \\int^b_a g(x)dx"
+                                ]
+                            },
+                            {
+                                "kommentar": "Vid beräkning av integralen för en funktion beräknas arean mellan funktionens graf och x-axeln i ett visst intervall.",
                                 "formler": [
                                     ""
                                 ]
@@ -295,9 +310,162 @@
                         ]
                     }
                 ]
+            },
+            {
+                "titel": "Differentialekvationer",
+                "delområden": [
+                    {
+                        "titel": "Homogena ekvationer",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h3>Homogena ekvationer av 1:a ordningen</h3>",
+                                "formler": [
+                                    "y'+ay=0"
+                                ]
+                            },
+                            {
+                                "kommentar": "Lösningar till homogena ekvationer av 1:a ordningen kan skrivas:",
+                                "formler": [
+                                    "y=Ce^{-ax}"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Homogena ekvationer av 2:a ordningen</h3>",
+                                "formler": [
+                                    "y''+ay'+by=o"
+                                ]
+                            },
+                            {
+                                "kommentar": "Den karakteristiska ekvationen:",
+                                "formler": [
+                                    "r^2+ar+b=0"
+                                ]
+                            },
+                            {
+                                "kommentar": "<p>Med rötterna \\(r_1 : r_2\\)</p>Om dessa rötter är reella och  \\(r_1 \\neq r_2\\) så kan lösningarna skrivas på formeln:",
+                                "formler": [
+                                    "y=C_1e^{r_1x}+C_2e^{r_2x}"
+                                ]
+                            },
+                            {
+                                "kommentar": "Om \\(r_1=s+it\\) och \\(r_2=s-it\\) så kan lösningarna skrivas på formeln:",
+                                "formler": [
+                                    "y=e^{sx}(C_1cos\\, tx+C_2sin\\, tx)"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Inhomogena ekvationer",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "Generellt bestäms den allmänna lösningen som",
+                                "formler": [
+                                    "y=y_h+y_p",
+                                    "y_p=Partikulärlösning",
+                                    "y_h=Allmännalösning"
+                                ]
+                            },
+                            {
+                                "kommentar": "<p><i>Partikulärlösning= en partikulärlösning till den inhomogena ekvationen.</p>Allmänna lösningen= den allmänna lösningen till motsvarande homogena ekvation.</i><h3>Separabla differentialekvationer</h3>",
+                                "formler": [
+                                    "g(y)y'=f(x)"
+                                ]
+                            },
+                            {
+                                "kommentar": "Som löses enligt:",
+                                "formler": [
+                                    "\\int g(y)dy=\\int f(x)dx"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "",
+                "delområden": [
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {}
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "",
+                "delområden": [
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {}
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "",
+                "delområden": [
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {}
+                        ]
+                    }
+                ]
             }
-        ],
-        "tabeller": {}
+        ]
     },
     "fysik": {
         "områden": [

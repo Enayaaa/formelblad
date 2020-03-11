@@ -25,9 +25,7 @@ class Utforska extends StatefulWidget {
               : "";
         }
       }
-      html += added != "" ? "<br>" : "";
     }
-    print(html);
 
     return html;
   }
@@ -95,8 +93,13 @@ class _UtforskaState extends State<Utforska> {
                     subtitle: mydata[i]["beskrivning"] != ""
                         ? Text(mydata[i]["beskrivning"])
                         : null,
-                    trailing: Icon(Icons.launch),
-                    contentPadding: EdgeInsets.only(left: 25, right: 15),
+                    trailing: Icon(
+                      Icons.launch,
+                      size: 20,
+                      color: Colors.blueGrey,
+                    ),
+                    contentPadding: EdgeInsets.only(left: 25, right: 25),
+                    selected: false,
                   ),
                 ),
               );
