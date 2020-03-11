@@ -13,14 +13,21 @@ class Utforska extends StatefulWidget {
     List formler = data["formler"];
 
     for (int i = 0; i < formler.length; i++) {
-      html += formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
+      String added =
+          formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
+      html += added;
       List formelLista =
           formler[i]["formler"] != null ? formler[i]["formler"] : [];
-      for (int j = 0; j < formelLista.length; j++) {
-        html += "\$\$" + formelLista[j].toString() + "\$\$";
+      if (formelLista.length != 0) {
+        for (int j = 0; j < formelLista.length; j++) {
+          html += formelLista[j].toString() != ""
+              ? "\$\$" + formelLista[j].toString() + "\$\$"
+              : "";
+        }
       }
-      html += "<br>";
+      html += added != "" ? "<br>" : "";
     }
+    print(html);
 
     return html;
   }
@@ -48,14 +55,6 @@ class _UtforskaState extends State<Utforska> {
           int length = mydata.length != null ? mydata.length : 0;
 
           for (int i = 0; i < length; i++) {
-            String _colorSettings =
-                globals.isDarkMode ? colorSettingsDark : colorSetingsLight;
-            String _endHtml = globals.isDarkMode ? endHtmlDark : endHtmlLight;
-            String _html = htmlStyle +
-                _colorSettings +
-                Utforska._createHtml(mydata[i]) +
-                _endHtml;
-
             if (mydata[i]["titel"] != "") {
               list.add(Divider(
                 height: 1,
@@ -71,6 +70,15 @@ class _UtforskaState extends State<Utforska> {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
+                            String _colorSettings = globals.isDarkMode
+                                ? colorSettingsDark
+                                : colorSetingsLight;
+                            String _endHtml =
+                                globals.isDarkMode ? endHtmlDark : endHtmlLight;
+                            String _html = htmlStyle +
+                                _colorSettings +
+                                Utforska._createHtml(mydata[i]) +
+                                _endHtml;
                             return Scaffold(
                               appBar: AppBar(
                                 title: Text(mydata[i]["titel"]),

@@ -11,7 +11,7 @@ const String htmlStyle = r"""<style>
 
         table {
             border-collapse: collapse;
-            
+            min-width: 345px;
             box-sizing: border-box;
         }
 

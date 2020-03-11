@@ -210,7 +210,13 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(x^a\\) d\u00E4r \\(a\\) \u00E4r ett reellt tal<\/td><td>&nbsp;\\(ax^{a-1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)<\/td><td>&nbsp;\\(a^x\\ln a\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)<\/td><td>&nbsp;\\(\\frac{1}{x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(k \\cdot e^{kx}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)<\/td><td>&nbsp;\\(-\\frac{1}{x^2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(\\cos x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(-\\sin x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\tan x\\)<\/td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)<\/td><td>&nbsp;\\(f'(x)+g'(x)\\)<\/td><\/tr><\/tbody> <\/table>",
+                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(x^a\\) d\u00E4r \\(a\\) \u00E4r ett reellt tal<\/td><td>&nbsp;\\(ax^{a-1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)<\/td><td>&nbsp;\\(a^x\\ln a\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)<\/td><td>&nbsp;\\(\\frac{1}{x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(k \\cdot e^{kx}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)<\/td><td>&nbsp;\\(-\\frac{1}{x^2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(\\cos x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(-\\sin x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\tan x\\)<\/td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)<\/td><td>&nbsp;\\(f'(x)+g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 style=\"border-left: 9px solid rgb(62, 111, 144); padding-left: 5px;\">Produktregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(f(x)\\cdot g(x)\\)<\/td><td>&nbsp;\\(f'(x)\\cdot g(x)+f(x)\\cdot g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 style=\"border-left: 9px solid rgb(62, 111, 144); padding-left: 5px;\">Kvotregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{f(x)}{g(x)}\\) \\((g(x)\\neq0)\\)<\/td><td>&nbsp;\\(\\frac{f'(x)\\cdot g(x)-f(x)\\cdot g'(x)}{(g(x))^2}\\)<\/td><\/tr><\/tbody> <\/table>",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "Vid derivering finns det allmänna regler för vad olika typer av funktioner har för derivata, vilka kan härledas med derivatans definition.",
                                 "formler": [
                                     ""
                                 ]
@@ -224,6 +230,15 @@
                             {
                                 "kommentar": "",
                                 "formler": [
+                                    "y=C \\cdot a^x",
+                                    "C,\\, a=konstanter",
+                                    "a>0",
+                                    "a\\neq 1"
+                                ]
+                            },
+                            {
+                                "kommentar": "En funktion där den oberoende variabeln, vanligen betecknad x, återfinns i exponenten till en potens kallas för en exponentialfunktion.",
+                                "formler": [
                                     ""
                                 ]
                             }
@@ -234,7 +249,15 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "Om \\(y=f(z)\\) och \\(z=g(x)\\) är två derviverbara funktioner så gäller för den sammansatta funktionen \\(y=f(g(x))\\) att",
+                                "formler": [
+                                    "y'=f'(g(x)) \\cdot g'(x)",
+                                    "eller",
+                                    "\\frac{dy}{dx}=\\frac{dy}{dz} \\cdot \\frac{dz}{dx}"
+                                ]
+                            },
+                            {
+                                "kommentar": "Kedjeregeln används vid derivering av en viss typ av sammansatta funktioner.",
                                 "formler": [
                                     ""
                                 ]
@@ -246,7 +269,13 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "",
+                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118); color:white;\">Funktion <\/td><td style=\"background-color: rgb(62, 111, 144); border-color: rgb(36, 85, 118);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(k\\)<\/td><td>&nbsp;\\(kx+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(x^n (n\\neq -1)\\)<\/td><td>&nbsp;\\(\\frac{x^{n+1}}{n+1}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\, (x \\neq 0)\\)<\/td><td>&nbsp;\\(\\ln |x|+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(\\frac{e^{kx}}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x \\,(a>0;a\\neq1)\\)<\/td><td>&nbsp;\\(\\frac{a^x}{\\ln a}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(-\\cos x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(\\sin x+ C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin kx\\)<\/td><td>&nbsp;\\(\\frac{-\\cos kx}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos kx\\)<\/td><td>&nbsp;\\(\\frac{\\sin kx}{k}+C\\)<\/td><\/tr><\/tbody> <\/table>",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "Funktionen \\(F(x)\\) är en primitiv funktion till \\(f(x)\\) om \\(F'(x)=f(x)\\), det vill säga om \\(F(x)\\) har derivatan \\(f(x)\\).",
                                 "formler": [
                                     ""
                                 ]
