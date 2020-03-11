@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:formelblad_app/data/formler.dart';
 import 'globals.dart' as globals;
+import 'package:formelblad_app/data/html_settings.dart';
 
 class Utforska extends StatefulWidget {
   @override
@@ -9,14 +10,6 @@ class Utforska extends StatefulWidget {
 
   static String _createHtml(Map data) {
     String html = "";
-    html += globals.isDarkMode
-        ? r"""<style>
-        body {
-            background-color: black;
-            color: white;
-        }
-    </style>"""
-        : "";
     List formler = data["formler"];
 
     for (int i = 0; i < formler.length; i++) {
@@ -55,7 +48,13 @@ class _UtforskaState extends State<Utforska> {
           int length = mydata.length != null ? mydata.length : 0;
 
           for (int i = 0; i < length; i++) {
-            String _html = Utforska._createHtml(mydata[i]);
+            String _colorSettings =
+                globals.isDarkMode ? colorSettingsDark : colorSetingsLight;
+            String _endHtml = globals.isDarkMode ? endHtmlDark : endHtmlLight;
+            String _html = htmlStyle +
+                _colorSettings +
+                Utforska._createHtml(mydata[i]) +
+                _endHtml;
 
             if (mydata[i]["titel"] != "") {
               list.add(Divider(
@@ -154,63 +153,10 @@ class Samlingar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("Hello Samlingar page"),
+      child: Text(
+        "Bokmärken kommer snart",
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
-
-/* ListView(
-      children: <Widget>[
-        SizedBox(height: 20),
-        Padding(
-          padding: EdgeInsets.only(left: 5, right: 5),
-          child: Container(
-            decoration: BoxDecoration(
-              color: globals.isDarkMode
-                  ? StylesDark.cardBGColor
-                  : StylesLight.cardBGColor,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: ListTile(
-              title: Text("Matemaik"),
-              leading: Icon(Icons.functions),
-              trailing: Icon(Icons.arrow_right),
-            ),
-          ),
-        ),
-        SizedBox(height: 5),
-        Padding(
-          padding: EdgeInsets.only(left: 5, right: 5),
-          child: Container(
-            decoration: BoxDecoration(
-              color: globals.isDarkMode
-                  ? StylesDark.cardBGColor
-                  : StylesLight.cardBGColor,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: ListTile(
-              title: Text("Fysik"),
-              leading: Icon(Icons.toys),
-              trailing: Icon(Icons.arrow_right),
-            ),
-          ),
-        ),
-        SizedBox(height: 5),
-        Padding(
-          padding: EdgeInsets.only(left: 5, right: 5),
-          child: Container(
-            decoration: BoxDecoration(
-              color: globals.isDarkMode
-                  ? StylesDark.cardBGColor
-                  : StylesLight.cardBGColor,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: ListTile(
-              title: Text("Kemi"),
-              leading: Icon(Icons.local_drink),
-              trailing: Icon(Icons.arrow_right),
-            ),
-          ),
-        ),
-      ],
-    ); */

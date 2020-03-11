@@ -1,8 +1,4 @@
-import 'dart:convert';
-
-final Map<String, dynamic> data = jsonDecode(jsonData);
-
-const jsonData = r"""{
+{
     "matematik": {
         "områden": [
             {
@@ -400,4 +396,4 @@ const jsonData = r"""{
             }
         ]
     }
-}""";
+}
