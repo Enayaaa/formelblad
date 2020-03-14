@@ -26,33 +26,36 @@ class _InstallningarState extends State<Installningar> {
   }
 
   Widget _settings(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(left: 5, right: 5, top: 20),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: globals.isDarkMode
-                  ? StylesDark.cardBGColor
-                  : StylesLight.cardBGColor,
-            ),
-            child: SwitchListTile(
-              title: Text("Dark theme"),
-              value: systemDarkOn() ? true : _darktheme,
-              onChanged: systemDarkOn()
-                  ? null
-                  : (bool value) => setState(() {
-                        _darktheme = value;
-                        globals.isDarkMode = _darktheme;
-                        globals.prefs.setBool("darktheme", value);
-                        themeBloc.changeTheme(value);
-                      }),
+    return Scaffold(
+      appBar: AppBar(title: Text("Inställningar")),
+      body: ListView(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(left: 5, right: 5, top: 20),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: globals.isDarkMode
+                    ? StylesDark.cardBGColor
+                    : StylesLight.cardBGColor,
+              ),
+              child: SwitchListTile(
+                title: Text("Dark theme"),
+                value: systemDarkOn() ? true : _darktheme,
+                onChanged: systemDarkOn()
+                    ? null
+                    : (bool value) => setState(() {
+                          _darktheme = value;
+                          globals.isDarkMode = _darktheme;
+                          globals.prefs.setBool("darktheme", value);
+                          themeBloc.changeTheme(value);
+                        }),
+              ),
             ),
           ),
-        ),
-        SizedBox(height: 5),
-      ],
+          SizedBox(height: 5),
+        ],
+      ),
     );
   }
 

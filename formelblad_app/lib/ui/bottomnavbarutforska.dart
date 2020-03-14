@@ -40,128 +40,132 @@ class _UtforskaState extends State<Utforska> {
     Icons.table_chart
   ];
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: data.keys.length,
-      separatorBuilder: (BuildContext context, int index) =>
-          Divider(height: 2, thickness: 2),
-      itemBuilder: (BuildContext context, int index) {
-        String title = data.keys.elementAt(index);
-        IconData icon = icons.elementAt(index);
+  List<Widget> _getDelomraden(String amne, int omradeIndex, Map data) {
+    List<Widget> list = [];
 
-        List<Widget> _getDelomraden(String amne, int omradeIndex) {
-          List<Widget> list = [];
+    List mydata = data[amne]["children"]["branches"][omradeIndex]["children"]
+        ["subbranches"];
+    int length = mydata.length != null ? mydata.length : 0;
 
-          List mydata = data[amne]["children"]["branches"][omradeIndex]
-              ["children"]["subbranches"];
-          int length = mydata.length != null ? mydata.length : 0;
-
-          for (int i = 0; i < length; i++) {
-            if (mydata[i]["title"] != "") {
-              list.add(
-                Divider(
-                  height: 1,
-                ),
-              );
-              list.add(
-                Container(
-                  color: globals.isDarkMode
-                      ? Color(0xFF121212)
-                      : Color(0xFFEFEFEF),
-                  child: ListTile(
-                    title: Text(mydata[i]["title"]),
-                    // subtitle: mydata[i]["beskrivning"] != ""
-                    //     ? Text(mydata[i]["beskrivning"])
-                    //     : null,
-                    trailing: Icon(
-                      Icons.launch,
-                      size: 20,
-                      color: Colors.blueGrey,
-                    ),
-                    contentPadding: EdgeInsets.only(left: 25, right: 25),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            String _colorSettings = globals.isDarkMode
-                                ? colorSettingsDark
-                                : colorSetingsLight;
-                            String _endHtml =
-                                globals.isDarkMode ? endHtmlDark : endHtmlLight;
-                            String _html = htmlStyle +
-                                _colorSettings +
-                                mydata[i]["html"] +
-                                _endHtml;
-                            return Scaffold(
-                              appBar: AppBar(
-                                title: Text(mydata[i]["title"]),
-                              ),
-                              body: TeXView(
-                                teXHTML: _html,
-                              ),
-                            );
-                          },
+    for (int i = 0; i < length; i++) {
+      if (mydata[i]["title"] != "") {
+        list.add(
+          Divider(
+            height: 1,
+          ),
+        );
+        list.add(
+          Container(
+            color: globals.isDarkMode ? Color(0xFF121212) : Color(0xFFEFEFEF),
+            child: ListTile(
+              title: Text(mydata[i]["title"]),
+              // subtitle: mydata[i]["beskrivning"] != ""
+              //     ? Text(mydata[i]["beskrivning"])
+              //     : null,
+              trailing: Icon(
+                Icons.launch,
+                size: 20,
+                color: Colors.blueGrey,
+              ),
+              contentPadding: EdgeInsets.only(left: 25, right: 25),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      String _colorSettings = globals.isDarkMode
+                          ? colorSettingsDark
+                          : colorSetingsLight;
+                      String _endHtml =
+                          globals.isDarkMode ? endHtmlDark : endHtmlLight;
+                      String _html = htmlStyle +
+                          _colorSettings +
+                          mydata[i]["html"] +
+                          _endHtml;
+                      return Scaffold(
+                        appBar: AppBar(
+                          title: Text(mydata[i]["title"]),
+                        ),
+                        body: TeXView(
+                          teXHTML: _html,
                         ),
                       );
                     },
                   ),
-                ),
-              );
-            }
-          }
-
-          return list;
-        }
-
-        List<Widget> _getAmneChildren() {
-          List<Widget> list = [];
-          List mydata = data[title]["children"]["branches"] != null
-              ? data[title]["children"]["branches"]
-              : [];
-          int _length = mydata.length != null ? mydata.length : 0;
-
-          list.add(Divider(height: 1));
-
-          for (int i = 0; i < _length; i++) {
-            List<Widget> _delomraden = _getDelomraden(title, i);
-
-            if (mydata[i]["title"] != "") {
-              list.add(
-                Padding(
-                  padding: EdgeInsets.only(left: 20, right: 10),
-                  child: ExpansionTile(
-                    title: Text(
-                      mydata[i]["title"],
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                    ),
-                    children: _delomraden,
-                  ),
-                ),
-              );
-              list.add(Divider(height: 1));
-            }
-          }
-          return list;
-        }
-
-        List<Widget> _amneChildren = _getAmneChildren();
-
-        return ExpansionTile(
-          title: Text(title,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-          leading: CircleAvatar(
-            backgroundColor: Colors.red,
-            child: Icon(
-              icon,
-              color: globals.isDarkMode ? Colors.black : Colors.white,
+                );
+              },
             ),
           ),
-          children: _amneChildren,
         );
-      },
+      }
+    }
+
+    return list;
+  }
+
+  List<Widget> _getAmneChildren(String title, Map data) {
+    List<Widget> list = [];
+    List mydata = data[title]["children"]["branches"] != null
+        ? data[title]["children"]["branches"]
+        : [];
+    int _length = mydata.length != null ? mydata.length : 0;
+
+    list.add(Divider(height: 1));
+
+    for (int i = 0; i < _length; i++) {
+      List<Widget> _delomraden = _getDelomraden(title, i, data);
+
+      if (mydata[i]["title"] != "") {
+        list.add(
+          Padding(
+            padding: EdgeInsets.only(left: 20, right: 10),
+            child: ExpansionTile(
+              title: Text(
+                mydata[i]["title"],
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+              ),
+              children: _delomraden,
+            ),
+          ),
+        );
+        list.add(Divider(height: 1));
+      }
+    }
+    return list;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Formelblad"),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.search), onPressed: () {})
+        ],
+      ),
+      body: ListView.separated(
+        itemCount: data.keys.length,
+        separatorBuilder: (BuildContext context, int index) =>
+            Divider(height: 2, thickness: 2),
+        itemBuilder: (BuildContext context, int index) {
+          String title = data.keys.elementAt(index);
+          IconData icon = icons.elementAt(index);
+          List<Widget> _amneChildren = _getAmneChildren(title, data);
+
+          return ExpansionTile(
+            title: Text(title,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+            leading: CircleAvatar(
+              backgroundColor: Colors.red,
+              child: Icon(
+                icon,
+                color: globals.isDarkMode ? Colors.black : Colors.white,
+              ),
+            ),
+            children: _amneChildren,
+          );
+        },
+      ),
     );
   }
 }
@@ -169,10 +173,13 @@ class _UtforskaState extends State<Utforska> {
 class Samlingar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Bokmärken kommer snart",
-        style: TextStyle(fontWeight: FontWeight.bold),
+    return Scaffold(
+      appBar: AppBar(title: Text("Formelsamlingar")),
+      body: Center(
+        child: Text(
+          "Bokmärken kommer snart",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

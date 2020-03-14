@@ -49,9 +49,6 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Formelblad"),
-      ),
       body: _bottomNavOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: bottomNavItems,
