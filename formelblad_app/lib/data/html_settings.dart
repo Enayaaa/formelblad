@@ -26,10 +26,16 @@ const String htmlStyle = r"""<style>
             box-sizing: border-box;
         }
 
+        .tableheader {
+          background-color: rgb(221, 67, 67);
+          border-color: rgb(134, 27, 27);
+          color:white;
+        }
+
         tr,
         td {
             border: 1px grey solid;
-            padding: 3px 10px;
+            padding: 3px 7px;
         }
     </style>""";
 const String colorSettingsDark = r"""<style>

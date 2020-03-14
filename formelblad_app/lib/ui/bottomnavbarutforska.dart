@@ -8,61 +8,78 @@ class Utforska extends StatefulWidget {
   @override
   Utforska({Key key}) : super(key: key);
 
-  static String _createHtml(Map data) {
-    String html = "";
-    List formler = data["formler"];
+  // static String _createHtml(Map data) {
+  //   String html = "";
+  //   List formler = data["formler"];
 
-    for (int i = 0; i < formler.length; i++) {
-      String added =
-          formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
-      html += added;
-      List formelLista =
-          formler[i]["formler"] != null ? formler[i]["formler"] : [];
-      if (formelLista.length != 0) {
-        for (int j = 0; j < formelLista.length; j++) {
-          html += formelLista[j].toString() != ""
-              ? "\$\$" + formelLista[j].toString() + "\$\$"
-              : "";
-        }
-      }
-    }
+  //   for (int i = 0; i < formler.length; i++) {
+  //     html += formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
+  //     List formelLista =
+  //         formler[i]["formler"] != null ? formler[i]["formler"] : [];
+  //     if (formelLista.length != 0) {
+  //       for (int j = 0; j < formelLista.length; j++) {
+  //         html += formelLista[j].toString() != ""
+  //             ? "\$\$" + formelLista[j].toString() + "\$\$"
+  //             : "";
+  //       }
+  //     }
+  //   }
 
-    return html;
-  }
+  //   return html;
+  // }
 
   @override
   _UtforskaState createState() => _UtforskaState();
 }
 
 class _UtforskaState extends State<Utforska> {
+  List icons = [
+    Icons.functions,
+    Icons.toys,
+    Icons.local_drink,
+    Icons.table_chart
+  ];
+
   @override
   Widget build(BuildContext context) {
-    List icons = [Icons.functions, Icons.toys, Icons.local_drink];
     return ListView.separated(
       itemCount: data.keys.length,
       separatorBuilder: (BuildContext context, int index) =>
           Divider(height: 2, thickness: 2),
       itemBuilder: (BuildContext context, int index) {
-        String title = data.keys.elementAt(index).toUpperCase();
+        String title = data.keys.elementAt(index);
         IconData icon = icons.elementAt(index);
 
         List<Widget> _getDelomraden(String amne, int omradeIndex) {
           List<Widget> list = [];
 
-          List mydata = data[amne]["områden"][omradeIndex]["delområden"];
+          List mydata = data[amne]["children"]["branches"][omradeIndex]
+              ["children"]["subbranches"];
           int length = mydata.length != null ? mydata.length : 0;
 
           for (int i = 0; i < length; i++) {
-            if (mydata[i]["titel"] != "") {
-              list.add(Divider(
-                height: 1,
-              ));
+            if (mydata[i]["title"] != "") {
+              list.add(
+                Divider(
+                  height: 1,
+                ),
+              );
               list.add(
                 Container(
                   color: globals.isDarkMode
                       ? Color(0xFF121212)
                       : Color(0xFFEFEFEF),
                   child: ListTile(
+                    title: Text(mydata[i]["title"]),
+                    // subtitle: mydata[i]["beskrivning"] != ""
+                    //     ? Text(mydata[i]["beskrivning"])
+                    //     : null,
+                    trailing: Icon(
+                      Icons.launch,
+                      size: 20,
+                      color: Colors.blueGrey,
+                    ),
+                    contentPadding: EdgeInsets.only(left: 25, right: 25),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -75,11 +92,11 @@ class _UtforskaState extends State<Utforska> {
                                 globals.isDarkMode ? endHtmlDark : endHtmlLight;
                             String _html = htmlStyle +
                                 _colorSettings +
-                                Utforska._createHtml(mydata[i]) +
+                                mydata[i]["html"] +
                                 _endHtml;
                             return Scaffold(
                               appBar: AppBar(
-                                title: Text(mydata[i]["titel"]),
+                                title: Text(mydata[i]["title"]),
                               ),
                               body: TeXView(
                                 teXHTML: _html,
@@ -89,17 +106,6 @@ class _UtforskaState extends State<Utforska> {
                         ),
                       );
                     },
-                    title: Text(mydata[i]["titel"]),
-                    subtitle: mydata[i]["beskrivning"] != ""
-                        ? Text(mydata[i]["beskrivning"])
-                        : null,
-                    trailing: Icon(
-                      Icons.launch,
-                      size: 20,
-                      color: Colors.blueGrey,
-                    ),
-                    contentPadding: EdgeInsets.only(left: 25, right: 25),
-                    selected: false,
                   ),
                 ),
               );
@@ -111,23 +117,23 @@ class _UtforskaState extends State<Utforska> {
 
         List<Widget> _getAmneChildren() {
           List<Widget> list = [];
-          List mydata = data[title.toLowerCase()]["områden"] != null
-              ? data[title.toLowerCase()]["områden"]
+          List mydata = data[title]["children"]["branches"] != null
+              ? data[title]["children"]["branches"]
               : [];
           int _length = mydata.length != null ? mydata.length : 0;
 
           list.add(Divider(height: 1));
 
           for (int i = 0; i < _length; i++) {
-            List<Widget> _delomraden = _getDelomraden(title.toLowerCase(), i);
+            List<Widget> _delomraden = _getDelomraden(title, i);
 
-            if (mydata[i]["titel"] != "") {
+            if (mydata[i]["title"] != "") {
               list.add(
                 Padding(
                   padding: EdgeInsets.only(left: 20, right: 10),
                   child: ExpansionTile(
                     title: Text(
-                      mydata[i]["titel"],
+                      mydata[i]["title"],
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                     ),

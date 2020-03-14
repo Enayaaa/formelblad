@@ -210,7 +210,7 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(x^a\\) d\u00E4r \\(a\\) \u00E4r ett reellt tal<\/td><td>&nbsp;\\(ax^{a-1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)<\/td><td>&nbsp;\\(a^x\\ln a\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)<\/td><td>&nbsp;\\(\\frac{1}{x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(k \\cdot e^{kx}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)<\/td><td>&nbsp;\\(-\\frac{1}{x^2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(\\cos x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(-\\sin x\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\tan x\\)<\/td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)<\/td><\/tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)<\/td><td>&nbsp;\\(f'(x)+g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 >Produktregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(f(x)\\cdot g(x)\\)<\/td><td>&nbsp;\\(f'(x)\\cdot g(x)+f(x)\\cdot g'(x)\\)<\/td><\/tr><\/tbody> <\/table><h2 >Kvotregeln<\/h2><table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{f(x)}{g(x)}\\) \\((g(x)\\neq0)\\)<\/td><td>&nbsp;\\(\\frac{f'(x)\\cdot g(x)-f(x)\\cdot g'(x)}{(g(x))^2}\\)<\/td><\/tr><\/tbody> <\/table><br>",
+                                "kommentar": "<table> <tbody> <tr> <td class=\"tableheader\">Funktion </td><td class=\"tableheader\"> Derivata&nbsp;</td></tr><tr> <td>&nbsp;\\(x^a\\) där \\(a\\) är ett reellt tal</td><td>&nbsp;\\(ax^{a-1}\\)</td></tr><tr> <td>&nbsp;\\(a^x\\) \\((a>0)\\)</td><td>&nbsp;\\(a^x\\ln a\\)</td></tr><tr> <td>&nbsp;\\(\\ln x\\) \\((x>0)\\)</td><td>&nbsp;\\(\\frac{1}{x}\\)</td></tr><tr> <td>&nbsp;\\(e^x\\)</td><td>&nbsp;\\(e^x\\)</td></tr><tr> <td>&nbsp;\\(e^{kx}\\)</td><td>&nbsp;\\(k \\cdot e^{kx}\\)</td></tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\)</td><td>&nbsp;\\(-\\frac{1}{x^2}\\)</td></tr><tr> <td>&nbsp;\\(\\sin x\\)</td><td>&nbsp;\\(\\cos x\\)</td></tr><tr> <td>&nbsp;\\(\\cos x\\)</td><td>&nbsp;\\(-\\sin x\\)</td></tr><tr> <td>&nbsp;\\(\\tan x\\)</td><td>&nbsp;\\(1+\\tan^2{x}=\\frac{1}{\\cos^2x}\\)</td></tr><tr> <td>&nbsp;\\(f(x)+g(x)\\)</td><td>&nbsp;\\(f'(x)+g'(x)\\)</td></tr></tbody> </table><h2 >Produktregeln</h2><table> <tbody> <tr> <td class=\"tableheader\">Funktion </td><td class=\"tableheader\"> Derivata&nbsp;</td></tr><tr> <td>&nbsp;\\(f(x)\\cdot g(x)\\)</td><td>&nbsp;\\(f'(x)\\cdot g(x)+f(x)\\cdot g'(x)\\)</td></tr></tbody> </table><h2 >Kvotregeln</h2><table> <tbody> <tr> <td class=\"tableheader\">Funktion </td><td class=\"tableheader\"> Derivata&nbsp;</td></tr><tr> <td>&nbsp;\\(\\frac{f(x)}{g(x)}\\) \\((g(x)\\neq0)\\)</td><td>&nbsp;\\(\\frac{f'(x)\\cdot g(x)-f(x)\\cdot g'(x)}{(g(x))^2}\\)</td></tr></tbody> </table><br>",
                                 "formler": [
                                     ""
                                 ]
@@ -269,7 +269,7 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<table> <tbody> <tr> <td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27); color:white;\">Funktion <\/td><td style=\"background-color: rgb(221, 67, 67); border-color: rgb(134, 27, 27);color:white;\"> Derivata&nbsp;<\/td><\/tr><tr> <td>&nbsp;\\(k\\)<\/td><td>&nbsp;\\(kx+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(x^n (n\\neq -1)\\)<\/td><td>&nbsp;\\(\\frac{x^{n+1}}{n+1}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\, (x \\neq 0)\\)<\/td><td>&nbsp;\\(\\ln |x|+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^x\\)<\/td><td>&nbsp;\\(e^x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(e^{kx}\\)<\/td><td>&nbsp;\\(\\frac{e^{kx}}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(a^x \\,(a>0;a\\neq1)\\)<\/td><td>&nbsp;\\(\\frac{a^x}{\\ln a}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin x\\)<\/td><td>&nbsp;\\(-\\cos x+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos x\\)<\/td><td>&nbsp;\\(\\sin x+ C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\sin kx\\)<\/td><td>&nbsp;\\(\\frac{-\\cos kx}{k}+C\\)<\/td><\/tr><tr> <td>&nbsp;\\(\\cos kx\\)<\/td><td>&nbsp;\\(\\frac{\\sin kx}{k}+C\\)<\/td><\/tr><\/tbody> <\/table><br>",
+                                "kommentar": "<table> <tbody> <tr> <td class=\"tableheader\">Funktion </td><td class=\"tableheader\"> Derivata&nbsp;</td></tr><tr> <td>&nbsp;\\(k\\)</td><td>&nbsp;\\(kx+C\\)</td></tr><tr> <td>&nbsp;\\(x^n (n\\neq -1)\\)</td><td>&nbsp;\\(\\frac{x^{n+1}}{n+1}+C\\)</td></tr><tr> <td>&nbsp;\\(\\frac{1}{x}\\, (x \\neq 0)\\)</td><td>&nbsp;\\(\\ln |x|+C\\)</td></tr><tr> <td>&nbsp;\\(e^x\\)</td><td>&nbsp;\\(e^x+C\\)</td></tr><tr> <td>&nbsp;\\(e^{kx}\\)</td><td>&nbsp;\\(\\frac{e^{kx}}{k}+C\\)</td></tr><tr> <td>&nbsp;\\(a^x \\,(a>0;a\\neq1)\\)</td><td>&nbsp;\\(\\frac{a^x}{\\ln a}+C\\)</td></tr><tr> <td>&nbsp;\\(\\sin x\\)</td><td>&nbsp;\\(-\\cos x+C\\)</td></tr><tr> <td>&nbsp;\\(\\cos x\\)</td><td>&nbsp;\\(\\sin x+ C\\)</td></tr><tr> <td>&nbsp;\\(\\sin kx\\)</td><td>&nbsp;\\(\\frac{-\\cos kx}{k}+C\\)</td></tr><tr> <td>&nbsp;\\(\\cos kx\\)</td><td>&nbsp;\\(\\frac{\\sin kx}{k}+C\\)</td></tr></tbody> </table><br>",
                                 "formler": [
                                     ""
                                 ]
@@ -287,7 +287,7 @@
                         "beskrivning": "",
                         "formler": [
                             {
-                                "kommentar": "<h3>Integralkalkylens fundamentalsats<\/h3>\r\nOm en funktion \\(f\\) \u00E4r kontinuerlig i intervallet \\(a\\leq x \\leq b\\) och \\(F\\) \u00E4r en primitiv funktion till \\(f\\) (dvs. \\(F'(x)=f(x))\\), s\u00E5 g\u00E4ller sambandet:",
+                                "kommentar": "<h3>Integralkalkylens fundamentalsats</h3>\r\nOm en funktion \\(f\\) är kontinuerlig i intervallet \\(a\\leq x \\leq b\\) och \\(F\\) är en primitiv funktion till \\(f\\) (dvs. \\(F'(x)=f(x))\\), så gäller sambandet:",
                                 "formler": [
                                     "\\int^b_a f (x) dx=[F(x)]^b_a=F(b)-F(a)"
                                 ]
@@ -385,28 +385,585 @@
                 ]
             },
             {
-                "titel": "",
+                "titel": "Funktionslära",
                 "delområden": [
                     {
-                        "titel": "",
+                        "titel": "Räta linjens ekvation",
                         "beskrivning": "",
                         "formler": [
                             {
                                 "kommentar": "",
                                 "formler": [
-                                    "",
-                                    "",
-                                    "",
+                                    "y=kx+m"
+                                ]
+                            },
+                            {
+                                "kommentar": "Riktingskoefficienten (\\(k\\)) för en linje genom punkterna \\((x_1,y_1)\\) och \\((x_2,y_2)\\) där \\(x_1\\neq x_2\\):",
+                                "formler": [
+                                    "k=\\frac{\\Delta y}{\\Delta x}=\\frac{y_2-y_1}{x_2-x_1}"
+                                ]
+                            },
+                            {
+                                "kommentar": "Linje genom punkten \\(0,m\\) och \\((x_1,y_1)\\) med riktingskoefficienten \\(k\\):",
+                                "formler": [
+                                    "y-y_1=k(x-x_1)"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Vilkor för vinkelräta linjer</h3>",
+                                "formler": [
+                                    "k_1 \\cdot k_2=-1"
+                                ]
+                            },
+                            {
+                                "kommentar": "Räta linjens ekvation är en allmän beskrivning av en linjär funktion",
+                                "formler": [
                                     ""
                                 ]
                             }
                         ]
                     },
                     {
-                        "titel": "",
+                        "titel": "Potensfunktioner",
                         "beskrivning": "",
                         "formler": [
-                            {}
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    "f(x)=C \\cdot x^n",
+                                    "C,n=konstanter"
+                                ]
+                            },
+                            {
+                                "kommentar": "I en potensfunktion återfinns den oberoende variabeln i potensens bas och exponenten anger funktionens grad.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Exponentialfunktioner",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    "f(x)=C \\cdot a^x",
+                                    "C, a = konstanter"
+                                ]
+                            },
+                            {
+                                "kommentar": "I en exponentialfunktion återfinns den oberoende variabeln i potensens exponent och basen anger funktionens förändringsfaktor.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "Geometri",
+                "delområden": [
+                    {
+                        "titel": "Cirkel",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h2>Area</h2>",
+                                "formler": [
+                                    "A_{cirkel}=\\pi r^2=\\frac{\\pi d^2}{4}"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h2>Omkrets</h2>",
+                                "formler": [
+                                    "O_{cirkel}=2\\pi r=\\pi d"
+                                ]
+                            },
+                            {
+                                "kommentar": "En cirkel är en rund, tvådimensionell, geometrisk figur där varje punkt på cirkelns periferi befinner sig på samma avstånd, radien \\(r\\), från cirkelns medelpunkt.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Cirkelsektor",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h2>Båge</h2>",
+                                "formler": [
+                                    "b=\\frac{\\alpha}{360}2\\pi r=vr"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h2>Area</h2>",
+                                "formler": [
+                                    "A_{cirkelsektor}=\\frac{\\alpha}{360}\\pi r^2=",
+                                    "= \\frac{vr^2}{2}=\\frac{br}{2}"
+                                ]
+                            },
+                            {
+                                "kommentar": "<p>I formeln är \\(\\alpha\\) medelpunktsvinkeln i grader och \\(v\\) är medelpunktsvinkeln i radianer.</p>En cirkelsektor är en avgränsad del av en cirkel. Hur stor del av cirkeln en cirkelsektor är beror på vinkeln \\(v\\) (eller \\(\\alpha\\)) i mitten av cirkeln, som kallas medelpunktsvinkeln.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Cylinder",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h2>Volym</h2>",
+                                "formler": [
+                                    "V_{cylinder}=\\pi r^2 h"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h2>Mantelarea</h2>",
+                                "formler": [
+                                    "Mantelarean_{cylinder}=2\\pi r h"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h2>Totala area</h2>",
+                                "formler": [
+                                    "Totala\\; arean_{cylinder}=2\\pi r h+2\\pi r^2=",
+                                    "= 2\\pi r(h+r)"
+                                ]
+                            },
+                            {
+                                "kommentar": "För en rak, cirkulär cylinder gäller ovanstående samband.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Klot (sfär)",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h3>Volym</h3>",
+                                "formler": [
+                                    "V_{klot}=\\frac{4\\pi r^3}{3}"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Area</h3>",
+                                "formler": [
+                                    "A_{klot}=4\\pi r^2"
+                                ]
+                            },
+                            {
+                                "kommentar": "Ett klot är en geometrisk figur som begränsas av den yta som ligger på radiens avstånd från klotets centrum. Själva ytan som en klotformad figur har kallas en sfär.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Klotsegment",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h3>Volym</h3>",
+                                "formler": [
+                                    "V_{klotsegment}=\\frac{\\pi h^2}{3} \\cdot (3r-h)"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Area</h3>",
+                                "formler": [
+                                    "A_{klotsegment}=2\\pi r h"
+                                ]
+                            },
+                            {
+                                "kommentar": "Ett klotsegment, eller ett sfäriskt segment, är det område som ligger över eller under ett plant snitt genom ett klot.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Kon",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h3>Volym</h3>",
+                                "formler": [
+                                    "V_{kon}=\\frac{\\pi r^2 h}{3}"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Mantelarea</h3>",
+                                "formler": [
+                                    "Mantelarean_{kon}=\\pi r s"
+                                ]
+                            },
+                            {
+                                "kommentar": "<h3>Totala area</h3>",
+                                "formler": [
+                                    "Totala\\; arean_{kon}=\\pi rs+\\pi r^2=\\pi r(s+r)"
+                                ]
+                            },
+                            {
+                                "kommentar": "En kon är en geometrisk figur som har en basyta och en mantelyta som formas till en spets utifrån basytan. Om basytan har formen av en cirkel och konens spets ligger rakt ovanför eller under cirkelns medelpunkt, då kallas konen för en rak, cirkulär kon.",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Parallellogram",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Parallelltrapets",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Prisma",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Pyramid",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Pythagoras sats",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Rektangel",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Romb",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Rätblock",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Stympad kon",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Triangel",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Avståndsformeln",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Bisektrissatsen",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Kordasatsen",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Likformighet",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Parallelltransversal",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Randvinkelsatsen",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Skala",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Median",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Cirkelsegment",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -421,26 +978,17 @@
                             {
                                 "kommentar": "",
                                 "formler": [
-                                    "",
-                                    "",
-                                    "",
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
                                     ""
                                 ]
                             }
                         ]
                     },
-                    {
-                        "titel": "",
-                        "beskrivning": "",
-                        "formler": [
-                            {}
-                        ]
-                    }
-                ]
-            },
-            {
-                "titel": "",
-                "delområden": [
                     {
                         "titel": "",
                         "beskrivning": "",
@@ -448,19 +996,15 @@
                             {
                                 "kommentar": "",
                                 "formler": [
-                                    "",
-                                    "",
-                                    "",
+                                    ""
+                                ]
+                            },
+                            {
+                                "kommentar": "",
+                                "formler": [
                                     ""
                                 ]
                             }
-                        ]
-                    },
-                    {
-                        "titel": "",
-                        "beskrivning": "",
-                        "formler": [
-                            {}
                         ]
                     }
                 ]
@@ -561,6 +1105,74 @@
             },
             {
                 "titel": "",
+                "delområden": [
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "",
+                "delområden": [
+                    {
+                        "titel": "",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "tabeller": {
+        "områden": [
+            {
+                "titel": "Matematik",
+                "delområden": [
+                    {
+                        "titel": "Prefix",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<table> <tbody> <tr> <td class=\"tableheader\">Potensform<\/td><td class=\"tableheader\">Namn<\/td><td class=\"tableheader\">Prefix<\/td><td class=\"tableheader\">Symbol<\/td><\/tr><tr> <td>&nbsp;\\(10^{24}\\)<\/td><td>&nbsp;Kvadriljon<\/td><td>&nbsp;\\(yotta\\)<\/td><td>&nbsp;\\(Y\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{21}\\)<\/td><td>&nbsp;Triljard<\/td><td>&nbsp;\\(zetta\\)<\/td><td>&nbsp;\\(Z\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{18}\\)<\/td><td>&nbsp;Triljon<\/td><td>&nbsp;\\(exa\\)<\/td><td>&nbsp;\\(E\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{15}\\)<\/td><td>&nbsp;Biljard<\/td><td>&nbsp;\\(peta\\)<\/td><td>&nbsp;\\(P\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{12}\\)<\/td><td>&nbsp;Biljon<\/td><td>&nbsp;\\(tera\\)<\/td><td>&nbsp;\\(T\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^9\\)<\/td><td>&nbsp;Miljard<\/td><td>&nbsp;\\(giga\\)<\/td><td>&nbsp;\\(G\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^6\\)<\/td><td>&nbsp;Miljon<\/td><td>&nbsp;\\(mega\\)<\/td><td>&nbsp;\\(M\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^3\\)<\/td><td>&nbsp;Tusen<\/td><td>&nbsp;\\(kilo\\)<\/td><td>&nbsp;\\(k\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^2\\)<\/td><td>&nbsp;Hundra<\/td><td>&nbsp;\\(hekto\\)<\/td><td>&nbsp;\\(h\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^1\\)<\/td><td>&nbsp;Tio<\/td><td>&nbsp;\\(deka\\)<\/td><td>&nbsp;\\(da\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^0\\)<\/td><td>&nbsp;Ett<\/td><td>&nbsp;\\((-)\\)<\/td><td>&nbsp;\\((-)\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^-1\\)<\/td><td>&nbsp;Tiondel<\/td><td>&nbsp;\\(deci\\)<\/td><td>&nbsp;\\(d\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^-2\\)<\/td><td>&nbsp;Hundradel<\/td><td>&nbsp;\\(centi\\)<\/td><td>&nbsp;\\(c\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^-3\\)<\/td><td>&nbsp;Tusendel<\/td><td>&nbsp;\\(milli\\)<\/td><td>&nbsp;\\(m\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^-6\\)<\/td><td>&nbsp;Miljondel<\/td><td>&nbsp;\\(mikro\\)<\/td><td>&nbsp;\\(mu\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^-9\\)<\/td><td>&nbsp;Miljarddel<\/td><td>&nbsp;\\(nano\\)<\/td><td>&nbsp;\\(n\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{-12}\\)<\/td><td>&nbsp;Biljondel<\/td><td>&nbsp;\\(piko\\)<\/td><td>&nbsp;\\(p\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{-15}\\)<\/td><td>&nbsp;Biljarddel<\/td><td>&nbsp;\\(femto\\)<\/td><td>&nbsp;\\(f\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{-18}\\)<\/td><td>&nbsp;Triljondel<\/td><td>&nbsp;\\(atto\\)<\/td><td>&nbsp;\\(a\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{-21}\\)<\/td><td>&nbsp;Triljarddel<\/td><td>&nbsp;\\(zepto\\)<\/td><td>&nbsp;\\(z\\)<\/td><\/tr><tr> <td>&nbsp;\\(10^{-24}\\)<\/td><td>&nbsp;Kvadriljondel<\/td><td>&nbsp;\\(yokto\\)<\/td><td>&nbsp;\\(y\\)<\/td><\/tr><\/tbody> <\/table><br>",
+                                "formler": [
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "titel": "Omvandlingsfaktorer",
+                        "beskrivning": "",
+                        "formler": [
+                            {
+                                "kommentar": "<h3>Area</h3><table> <tbody> <tr> <td class=\"tableheader\"><\/td><td class=\"tableheader\">\\(m^2\\)<\/td><td class=\"tableheader\">\\(dm^2\\)<\/td><td class=\"tableheader\">\\(cm^2\\)<\/td><td class=\"tableheader\">\\(mm^2\\)<\/td><\/tr><tr> <td>&nbsp;\\(m^2=\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^2\\)<\/td><td>&nbsp;\\(10^4\\)<\/td><td>&nbsp;\\(10^6\\)<\/td><\/tr><tr> <td>&nbsp;\\(dm^2=\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^2\\)<\/td><td>&nbsp;\\(10^4\\)<\/td><\/tr><tr> <td>&nbsp;\\(cm^2=\\)<\/td><td>&nbsp;\\(10^{-4}\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^2\\)<\/td><\/tr><tr> <td>&nbsp;\\(mm^2=\\)<\/td><td>&nbsp;\\(10^{-6}\\)<\/td><td>&nbsp;\\(10^{-4}\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(1\\)<\/td><\/tr><\/tbody> <\/table><br><h3>Volym</h3><table> <tbody> <tr> <td class=\"tableheader\"><\/td><td class=\"tableheader\">\\(m^3\\)<\/td><td class=\"tableheader\">\\(dm^3\\)<\/td><td class=\"tableheader\">\\(cm^3\\)<\/td><td class=\"tableheader\">\\(mm^3\\)<\/td><td class=\"tableheader\">\\(dl\\)<\/td><td class=\"tableheader\">\\(cl\\)<\/td><td class=\"tableheader\">\\(ml\\)<\/td><\/tr><tr> <td>&nbsp;\\(m^3=\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^3\\)<\/td><td>&nbsp;\\(10^6\\)<\/td><td>&nbsp;\\(10^9\\)<\/td><td>&nbsp;\\(10^4\\)<\/td><td>&nbsp;\\(10^5\\)<\/td><td>&nbsp;\\(10^6\\)<\/td><\/tr><tr> <td>&nbsp;\\(dm^3=\\)<\/td><td>&nbsp;\\(10^{-3}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^3\\)<\/td><td>&nbsp;\\(10^6\\)<\/td><td>&nbsp;\\(10^1\\)<\/td><td>&nbsp;\\(10^2\\)<\/td><td>&nbsp;\\(10^3\\)<\/td><\/tr><tr> <td>&nbsp;\\(cm^3=\\)<\/td><td>&nbsp;\\(10^{-6}\\)<\/td><td>&nbsp;\\(10^{-3}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^3\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(10^{-1}\\)<\/td><td>&nbsp;\\(1\\)<\/td><\/tr><tr> <td>&nbsp;\\(mm^3=\\)<\/td><td>&nbsp;\\(10^{-9}\\)<\/td><td>&nbsp;\\(10^{-6}\\)<\/td><td>&nbsp;\\(10^{-3}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^{-5}\\)<\/td><td>&nbsp;\\(10^{-4}\\)<\/td><td>&nbsp;\\(10^{-3}\\)<\/td><\/tr><tr> <td>&nbsp;\\(dl=\\)<\/td><td>&nbsp;\\(10^{-4}\\)<\/td><td>&nbsp;\\(10^{-1}\\)<\/td><td>&nbsp;\\(10^{2}\\)<\/td><td>&nbsp;\\(10^{5}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^{1}\\)<\/td><td>&nbsp;\\(10^{2}\\)<\/td><\/tr><tr> <td>&nbsp;\\(cl=\\)<\/td><td>&nbsp;\\(10^{-5}\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(10\\)<\/td><td>&nbsp;\\(10^{4}\\)<\/td><td>&nbsp;\\(10^{-1}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^{1}\\)<\/td><\/tr><tr> <td>&nbsp;\\(ml=\\)<\/td><td>&nbsp;\\(10^{-6}\\)<\/td><td>&nbsp;\\(10^{-3}\\)<\/td><td>&nbsp;\\(1\\)<\/td><td>&nbsp;\\(10^{3}\\)<\/td><td>&nbsp;\\(10^{-2}\\)<\/td><td>&nbsp;\\(10^{-1}\\)<\/td><td>&nbsp;\\(1\\)<\/td><\/tr><\/tbody> <\/table><br>",
+                                "formler": [
+                                    ""
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "titel": "Kemi",
                 "delområden": [
                     {
                         "titel": "",
