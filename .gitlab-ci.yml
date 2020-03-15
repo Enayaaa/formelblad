@@ -29,7 +29,7 @@ before_script:
    - chmod +x ./android/gradlew
 
 stages:  
-   - test 
+  #  - test 
    - build
 
 build:apk:
@@ -40,13 +40,13 @@ build:apk:
     paths:
      - build/app/outputs/apk
 
-build:bundle:
-  stage: build
-  script:
-    - flutter build appbundle
-  artifacts:
-    paths:
-      - build/app/outputs/bundle
+# build:bundle:
+#   stage: build
+#   script:
+#     - flutter build appbundle
+#   artifacts:
+#     paths:
+#       - build/app/outputs/bundle
 
 # test:android:
 #   stage: test
