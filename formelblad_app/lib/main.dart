@@ -8,6 +8,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   globals.prefs = await SharedPreferences.getInstance();
   bool _useDark = globals.prefs.getBool("darktheme") ?? false;
+  globals.prefs.getStringList("searchhistory") ??
+      globals.prefs.setStringList("searchhistory", []);
   runApp(MyApp(useDark: _useDark));
 }
 

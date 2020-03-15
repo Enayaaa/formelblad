@@ -1,32 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:formelblad_app/data/formler.dart';
+import 'package:formelblad_app/ui/datasearch.dart';
 import 'globals.dart' as globals;
 import 'package:formelblad_app/data/html_settings.dart';
 
 class Utforska extends StatefulWidget {
   @override
   Utforska({Key key}) : super(key: key);
-
-  // static String _createHtml(Map data) {
-  //   String html = "";
-  //   List formler = data["formler"];
-
-  //   for (int i = 0; i < formler.length; i++) {
-  //     html += formler[i]["kommentar"] != null ? formler[i]["kommentar"] : "";
-  //     List formelLista =
-  //         formler[i]["formler"] != null ? formler[i]["formler"] : [];
-  //     if (formelLista.length != 0) {
-  //       for (int j = 0; j < formelLista.length; j++) {
-  //         html += formelLista[j].toString() != ""
-  //             ? "\$\$" + formelLista[j].toString() + "\$\$"
-  //             : "";
-  //       }
-  //     }
-  //   }
-
-  //   return html;
-  // }
 
   @override
   _UtforskaState createState() => _UtforskaState();
@@ -59,9 +40,6 @@ class _UtforskaState extends State<Utforska> {
             color: globals.isDarkMode ? Color(0xFF121212) : Color(0xFFEFEFEF),
             child: ListTile(
               title: Text(mydata[i]["title"]),
-              // subtitle: mydata[i]["beskrivning"] != ""
-              //     ? Text(mydata[i]["beskrivning"])
-              //     : null,
               trailing: Icon(
                 Icons.launch,
                 size: 20,
@@ -140,7 +118,11 @@ class _UtforskaState extends State<Utforska> {
       appBar: AppBar(
         title: Text("Formelblad"),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.search), onPressed: () {})
+          IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                showSearch(context: context, delegate: DataSearch());
+              })
         ],
       ),
       body: ListView.separated(
