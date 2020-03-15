@@ -268,6 +268,7 @@ class DataSearch extends SearchDelegate<String> {
   }
 
   Future<bool> _addToSearchHistory(String entry) async {
+    globals.refreshPrefs();
     List<String> searchHistory =
         globals.prefs.getStringList("searchhistory").toList();
 
