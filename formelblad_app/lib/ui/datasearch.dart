@@ -275,6 +275,10 @@ class DataSearch extends SearchDelegate<String> {
       searchHistory.insert(0, entry);
     }
 
+    if (searchHistory.length > 5) {
+      searchHistory.removeLast();
+    }
+
     return await globals.prefs.setStringList("searchhistory", searchHistory);
   }
 }
