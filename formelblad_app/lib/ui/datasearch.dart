@@ -49,13 +49,15 @@ class DataSearch extends SearchDelegate<String> {
   @override
   List<Widget> buildActions(BuildContext context) {
     // Actions for app bar
-    return [
-      IconButton(
-          icon: Icon(Icons.clear),
-          onPressed: () {
-            query = "";
-          })
-    ];
+    return query.isNotEmpty
+        ? [
+            IconButton(
+                icon: Icon(Icons.clear),
+                onPressed: () {
+                  query = "";
+                })
+          ]
+        : null;
   }
 
   @override
@@ -144,121 +146,134 @@ class DataSearch extends SearchDelegate<String> {
               0) {
             return Container(
               margin: EdgeInsets.only(bottom: 2),
-              child: ListTile(
-                leading: Icon(Icons.assessment),
-                trailing: Icon(Icons.launch),
-                title: RichText(
-                  text: TextSpan(
-                    text: suggestionList[index].substring(0, query.length),
-                    style: TextStyle(
-                      color: globals.isDarkMode ? Colors.white : Colors.black,
-                      fontWeight: FontWeight.bold,
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    _addToSearchHistory(suggestionList[index]);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          String _colorSettings = globals.isDarkMode
+                              ? colorSettingsDark
+                              : colorSetingsLight;
+                          String _endHtml =
+                              globals.isDarkMode ? endHtmlDark : endHtmlLight;
+                          String _html = htmlStyle +
+                              _colorSettings +
+                              map[suggestionList[index]] +
+                              _endHtml;
+                          return Scaffold(
+                            appBar: AppBar(
+                              title: Text(suggestionList[index]),
+                            ),
+                            body: TeXView(
+                              teXHTML: _html,
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.assessment),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    title: RichText(
+                      text: TextSpan(
+                        text: suggestionList[index].substring(0, query.length),
+                        style: TextStyle(
+                          color:
+                              globals.isDarkMode ? Colors.white : Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: suggestionList[index].substring(query.length),
+                            style: TextStyle(fontWeight: FontWeight.normal),
+                          )
+                        ],
+                      ),
                     ),
-                    children: [
-                      TextSpan(
-                        text: suggestionList[index].substring(query.length),
-                        style: TextStyle(fontWeight: FontWeight.normal),
-                      )
-                    ],
                   ),
                 ),
-                onTap: () {
-                  _addToSearchHistory(suggestionList[index]);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        String _colorSettings = globals.isDarkMode
-                            ? colorSettingsDark
-                            : colorSetingsLight;
-                        String _endHtml =
-                            globals.isDarkMode ? endHtmlDark : endHtmlLight;
-                        String _html = htmlStyle +
-                            _colorSettings +
-                            map[suggestionList[index]] +
-                            _endHtml;
-                        return Scaffold(
-                          appBar: AppBar(
-                            title: Text(suggestionList[index]),
-                          ),
-                          body: TeXView(
-                            teXHTML: _html,
-                          ),
-                        );
-                      },
-                    ),
-                  );
-                },
               ),
             );
           } else {
             return Container(
               margin: EdgeInsets.only(bottom: 2),
-              child: ListTile(
-                leading: Icon(Icons.assessment),
-                trailing: Icon(Icons.launch),
-                title: RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        color:
-                            globals.isDarkMode ? Colors.white : Colors.black),
-                    text: suggestionList[index].substring(
-                        0,
-                        suggestionList[index]
-                            .toLowerCase()
-                            .indexOf(query.toLowerCase())),
-                    children: [
-                      TextSpan(
-                        style: TextStyle(fontWeight: FontWeight.bold),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    _addToSearchHistory(suggestionList[index]);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          String _colorSettings = globals.isDarkMode
+                              ? colorSettingsDark
+                              : colorSetingsLight;
+                          String _endHtml =
+                              globals.isDarkMode ? endHtmlDark : endHtmlLight;
+                          String _html = htmlStyle +
+                              _colorSettings +
+                              map[suggestionList[index]] +
+                              _endHtml;
+                          return Scaffold(
+                            appBar: AppBar(
+                              title: Text(suggestionList[index]),
+                            ),
+                            body: TeXView(
+                              teXHTML: _html,
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.assessment),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    title: RichText(
+                      text: TextSpan(
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            color: globals.isDarkMode
+                                ? Colors.white
+                                : Colors.black),
                         text: suggestionList[index].substring(
+                            0,
                             suggestionList[index]
                                 .toLowerCase()
-                                .indexOf(query.toLowerCase()),
-                            suggestionList[index]
-                                    .toLowerCase()
-                                    .indexOf(query.toLowerCase()) +
-                                query.length),
+                                .indexOf(query.toLowerCase())),
                         children: [
                           TextSpan(
-                              style: TextStyle(fontWeight: FontWeight.normal),
-                              text: suggestionList[index].substring(
-                                  suggestionList[index]
-                                          .toLowerCase()
-                                          .indexOf(query.toLowerCase()) +
-                                      query.length))
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                            text: suggestionList[index].substring(
+                                suggestionList[index]
+                                    .toLowerCase()
+                                    .indexOf(query.toLowerCase()),
+                                suggestionList[index]
+                                        .toLowerCase()
+                                        .indexOf(query.toLowerCase()) +
+                                    query.length),
+                            children: [
+                              TextSpan(
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.normal),
+                                  text: suggestionList[index].substring(
+                                      suggestionList[index]
+                                              .toLowerCase()
+                                              .indexOf(query.toLowerCase()) +
+                                          query.length))
+                            ],
+                          )
                         ],
-                      )
-                    ],
+                      ),
+                    ),
                   ),
                 ),
-                onTap: () {
-                  _addToSearchHistory(suggestionList[index]);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        String _colorSettings = globals.isDarkMode
-                            ? colorSettingsDark
-                            : colorSetingsLight;
-                        String _endHtml =
-                            globals.isDarkMode ? endHtmlDark : endHtmlLight;
-                        String _html = htmlStyle +
-                            _colorSettings +
-                            map[suggestionList[index]] +
-                            _endHtml;
-                        return Scaffold(
-                          appBar: AppBar(
-                            title: Text(suggestionList[index]),
-                          ),
-                          body: TeXView(
-                            teXHTML: _html,
-                          ),
-                        );
-                      },
-                    ),
-                  );
-                },
               ),
             );
           }
@@ -270,6 +285,7 @@ class DataSearch extends SearchDelegate<String> {
   Future<bool> _addToSearchHistory(String entry) async {
     List<String> searchHistory =
         globals.prefs.getStringList("searchhistory").toList();
+
     searchHistory.remove(entry);
     searchHistory.insert(0, entry);
 

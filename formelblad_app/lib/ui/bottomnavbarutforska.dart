@@ -30,48 +30,53 @@ class _UtforskaState extends State<Utforska> {
 
     for (int i = 0; i < length; i++) {
       if (mydata[i]["title"] != "") {
-        list.add(
-          Divider(
-            height: 1,
-          ),
-        );
+        // list.add(
+        //   Divider(
+        //     height: 1,
+        //   ),
+        // );
         list.add(
           Container(
             color: globals.isDarkMode ? Color(0xFF121212) : Color(0xFFEFEFEF),
-            child: ListTile(
-              title: Text(mydata[i]["title"]),
-              trailing: Icon(
-                Icons.launch,
-                size: 20,
-                color: Colors.blueGrey,
-              ),
-              contentPadding: EdgeInsets.only(left: 25, right: 25),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      String _colorSettings = globals.isDarkMode
-                          ? colorSettingsDark
-                          : colorSetingsLight;
-                      String _endHtml =
-                          globals.isDarkMode ? endHtmlDark : endHtmlLight;
-                      String _html = htmlStyle +
-                          _colorSettings +
-                          mydata[i]["html"] +
-                          _endHtml;
-                      return Scaffold(
-                        appBar: AppBar(
-                          title: Text(mydata[i]["title"]),
-                        ),
-                        body: TeXView(
-                          teXHTML: _html,
-                        ),
-                      );
-                    },
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        String _colorSettings = globals.isDarkMode
+                            ? colorSettingsDark
+                            : colorSetingsLight;
+                        String _endHtml =
+                            globals.isDarkMode ? endHtmlDark : endHtmlLight;
+                        String _html = htmlStyle +
+                            _colorSettings +
+                            mydata[i]["html"] +
+                            _endHtml;
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text(mydata[i]["title"]),
+                          ),
+                          body: TeXView(
+                            teXHTML: _html,
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
+                child: ListTile(
+                  title: Text(mydata[i]["title"]),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 20,
+                    color: Colors.blueGrey,
                   ),
-                );
-              },
+                  contentPadding: EdgeInsets.only(left: 25, right: 25),
+                ),
+              ),
             ),
           ),
         );

@@ -37,149 +37,231 @@
             border: 1px grey solid;
             padding: 3px 10px;
         }
+
+        tr:nth-child(1) {
+            background-color: tomato;
+            color: white
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 40%;
+            height: auto !important;
+        }
     </style>
 </head>
 
 <body>
 
-    <table>
+    <h3>Tryck</h3>
+    <table border="0" style="width: 547px; height: 166px; ">
         <tbody>
-            <tr>
-                <td class="tableheader">Potensform</td>
-                <td class="tableheader">Namn</td>
-                <td class="tableheader">Prefix</td>
-                <td class="tableheader">Symbol</td>
+            <td>&nbsp;</td>
+            <td>\(Pa\)</td>
+            <td>\(bar\)</td>
+            <td>\(kp/cm^2\)</td>
+            <td>\(torr(mmHg)\)</td>
+            <td>\(atm\)</td>
             </tr>
-            <tr>
-                <td>&nbsp;\(10^{24}\)</td>
-                <td>&nbsp;Kvadriljon</td>
-                <td>&nbsp;\(yotta\)</td>
-                <td>&nbsp;\(Y\)</td>
+            <td>\(Pa=\)</td>
+            <td>\(1\)</td>
+            <td>\(10^{-5}\)</td>
+            <td>\(1,01972 \cdot 10^{-5}\)</td>
+            <td>\(750,06 \cdot 10^{-3}\)</td>
+            <td>\(0,98692 \cdot 10^{-6}\)</td>
             </tr>
-            <tr>
-                <td>&nbsp;\(10^{21}\)</td>
-                <td>&nbsp;Triljard</td>
-                <td>&nbsp;\(zetta\)</td>
-                <td>&nbsp;\(Z\)</td>
+            <td>\(bar=\)</td>
+            <td>\(10^5\)</td>
+            <td>\(1\)</td>
+            <td>\(1,01972\)</td>
+            <td>\(750,06\)</td>
+            <td>\(0,98692\)</td>
             </tr>
-            <tr>
-                <td>&nbsp;\(10^{18}\)</td>
-                <td>&nbsp;Triljon</td>
-                <td>&nbsp;\(exa\)</td>
-                <td>&nbsp;\(E\)</td>
+            <td>\(kp/cm^2=\)</td>
+            <td>\(9,80665 \cdot 10^4\)</td>
+            <td>\(9,80665\)</td>
+            <td>\(1\)</td>
+            <td>\(735,56\)</td>
+            <td>\(0,96784\)</td>
             </tr>
-            <tr>
-                <td>&nbsp;\(10^{15}\)</td>
-                <td>&nbsp;Biljard</td>
-                <td>&nbsp;\(peta\)</td>
-                <td>&nbsp;\(P\)</td>
+            <td>\(torr(mmHg)=\)</td>
+            <td>\(133,322\)</td>
+            <td>\(1,33322\cdot 10^{-3}\)</td>
+            <td>\(1,35951\cdot 10^{-3}\)</td>
+            <td>\(1\)</td>
+            <td>\(1,31579\)</td>
             </tr>
-            <tr>
-                <td>&nbsp;\(10^{12}\)</td>
-                <td>&nbsp;Biljon</td>
-                <td>&nbsp;\(tera\)</td>
-                <td>&nbsp;\(T\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^9\)</td>
-                <td>&nbsp;Miljard</td>
-                <td>&nbsp;\(giga\)</td>
-                <td>&nbsp;\(G\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^6\)</td>
-                <td>&nbsp;Miljon</td>
-                <td>&nbsp;\(mega\)</td>
-                <td>&nbsp;\(M\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^3\)</td>
-                <td>&nbsp;Tusen</td>
-                <td>&nbsp;\(kilo\)</td>
-                <td>&nbsp;\(k\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^2\)</td>
-                <td>&nbsp;Hundra</td>
-                <td>&nbsp;\(hekto\)</td>
-                <td>&nbsp;\(h\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^1\)</td>
-                <td>&nbsp;Tio</td>
-                <td>&nbsp;\(deka\)</td>
-                <td>&nbsp;\(da\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^0\)</td>
-                <td>&nbsp;Ett</td>
-                <td>&nbsp;\((-)\)</td>
-                <td>&nbsp;\((-)\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^-1\)</td>
-                <td>&nbsp;Tiondel</td>
-                <td>&nbsp;\(deci\)</td>
-                <td>&nbsp;\(d\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^-2\)</td>
-                <td>&nbsp;Hundradel</td>
-                <td>&nbsp;\(centi\)</td>
-                <td>&nbsp;\(c\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^-3\)</td>
-                <td>&nbsp;Tusendel</td>
-                <td>&nbsp;\(milli\)</td>
-                <td>&nbsp;\(m\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^-6\)</td>
-                <td>&nbsp;Miljondel</td>
-                <td>&nbsp;\(mikro\)</td>
-                <td>&nbsp;\(mu\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^-9\)</td>
-                <td>&nbsp;Miljarddel</td>
-                <td>&nbsp;\(nano\)</td>
-                <td>&nbsp;\(n\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^{-12}\)</td>
-                <td>&nbsp;Biljondel</td>
-                <td>&nbsp;\(piko\)</td>
-                <td>&nbsp;\(p\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^{-15}\)</td>
-                <td>&nbsp;Biljarddel</td>
-                <td>&nbsp;\(femto\)</td>
-                <td>&nbsp;\(f\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^{-18}\)</td>
-                <td>&nbsp;Triljondel</td>
-                <td>&nbsp;\(atto\)</td>
-                <td>&nbsp;\(a\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^{-21}\)</td>
-                <td>&nbsp;Triljarddel</td>
-                <td>&nbsp;\(zepto\)</td>
-                <td>&nbsp;\(z\)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;\(10^{-24}\)</td>
-                <td>&nbsp;Kvadriljondel</td>
-                <td>&nbsp;\(yokto\)</td>
-                <td>&nbsp;\(y\)</td>
+            <td>\(atm=\)</td>
+            <td>\(1,01325 \cdot 10^5\)</td>
+            <td>\(1,01325\)</td>
+            <td>\(1,03323\)</td>
+            <td>\(760\)</td>
+            <td>\(1\)</td>
             </tr>
         </tbody>
-    </table><br>
-
-    <h2 style="border-left: 9px solid rgb(221, 67, 67); padding-left: 5px;">Produktregeln</h2>
+    </table>
+    <h3>Energi, arbete</h3>
+    <table border="0">
+        <tbody>
+            <td>&nbsp;</td>
+            <td>\(J\)</td>
+            <td>\(kWh\)</td>
+            <td>\(kpm\)</td>
+            <td>\(kcal\)</td>
+            <td>\(eV\)</td>
+            </tr>
+            <td>\(J=\)</td>
+            <td>\(1\)</td>
+            <td>\(2,77778 \cdot 10^{-7}\)</td>
+            <td>\(0,101972\)</td>
+            <td>\(2,38846 \cdot 10^{-4}\)</td>
+            <td>\(6,2415 \cdot^{18}\)</td>
+            </tr>
+            <td>\(kWh=\)</td>
+            <td>\(3,6\cdot 10^6\)</td>
+            <td>\(1\)</td>
+            <td>\(3,67098 \cdot 10^5\)</td>
+            <td>\(859,845\)</td>
+            <td>\(2,2469 \cdot 10^{25}\)</td>
+            </tr>
+            <td>\(kpm=\)</td>
+            <td>\(9,80665\)</td>
+            <td>\(2,72407 \cdot 10^{-6}\)</td>
+            <td>\(1\)</td>
+            <td>\(2,34228 \cdot 10^{-3}\)</td>
+            <td>\(6,1208 \cdot 10^{19}\)</td>
+            </tr>
+            <td>\(kcal=\)</td>
+            <td>\(4,1868 \cdot 10^3\)</td>
+            <td>\(1,163 \cdot 10^{-3}\)</td>
+            <td>\(426,935\)</td>
+            <td>\(1\)</td>
+            <td>\(2,6132 \cdot ^{22}\)</td>
+            </tr>
+            <td>\(eV=\)</td>
+            <td>\(1,6022 \cdot 10^{-19}\)</td>
+            <td>\(4,4505 \cdot 10^{-26}\)</td>
+            <td>\(1.6338 \cdot 10^{-20}\)</td>
+            <td>\(3,8267 \cdot {-23}\)</td>
+            <td>\(1\)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Area</h3>
+    <table border="0">
+        <tbody>
+            <td>&nbsp;</td>
+            <td>\(m^2\)</td>
+            <td>\(dm^2\)</td>
+            <td>\(cm^2\)</td>
+            <td>\(mm^2\)</td>
+            </tr>
+            <td>\(m^2=\)</td>
+            <td>\(1\)</td>
+            <td>\(100\)</td>
+            <td>\(10000\)</td>
+            <td>\(1000000\)</td>
+            </tr>
+            <td>\(dm^2=\)</td>
+            <td>\(0,01\)</td>
+            <td>\(1\)</td>
+            <td>\(100\)</td>
+            <td>\(10000\)</td>
+            </tr>
+            <td>\(cm^2=\)</td>
+            <td>\(0,0001\)</td>
+            <td>\(0,01\)</td>
+            <td>\(1\)</td>
+            <td>\(100\)</td>
+            </tr>
+            <td>\(mm^2=\)</td>
+            <td>\(0,000001\)</td>
+            <td>\(0,0001\)</td>
+            <td>\(0,01\)</td>
+            <td>\(1\)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Volym</h3>
+    <table border="0">
+        <tbody>
+            <td>&nbsp;</td>
+            <td>\(m^3\)</td>
+            <td>\(dm^3\)</td>
+            <td>\(cm^3\)</td>
+            <td>\(mm^3\)</td>
+            <td>\(dl\)</td>
+            <td>\(cl\)</td>
+            <td>\(ml\)</td>
+            </tr>
+            <td>\(m^3=\)</td>
+            <td>\(1\)</td>
+            <td>\(10^3\)</td>
+            <td>\(10^6\)</td>
+            <td>\(10^9\)</td>
+            <td>\(10^4\)</td>
+            <td>\(10^5\)</td>
+            <td>\(10^6\)</td>
+            </tr>
+            <td>\(dm^3=\)</td>
+            <td>\(10^{-3}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^3\)</td>
+            <td>\(10^6\)</td>
+            <td>\(10^1\)</td>
+            <td>\(10^2\)</td>
+            <td>\(10^3\)</td>
+            </tr>
+            <td>\(cm^3=\)</td>
+            <td>\(10^{-6}\)</td>
+            <td>\(10^{-3}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^3\)</td>
+            <td>\(10^{-2}\)</td>
+            <td>\(10^{-1}\)</td>
+            <td>\(1\)</td>
+            </tr>
+            <td>\(mm^3=\)</td>
+            <td>\(10^{-9}\)</td>
+            <td>\(10^{-6}\)</td>
+            <td>\(10^{-3}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^{-5}\)</td>
+            <td>\(10^{-4}\)</td>
+            <td>\(10^{-3}\)</td>
+            </tr>
+            <td>\(dl=\)</td>
+            <td>\(10^{-4}\)</td>
+            <td>\(10^{-1}\)</td>
+            <td>\(10^{2}\)</td>
+            <td>\(10^{5}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^{1}\)</td>
+            <td>\(10^{2}\)</td>
+            </tr>
+            <td>\(cl=\)</td>
+            <td>\(10^{-5}\)</td>
+            <td>\(10^{-2}\)</td>
+            <td>\(10\)</td>
+            <td>\(10^{4}\)</td>
+            <td>\(10^{-1}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^{1}\)</td>
+            </tr>
+            <td>\(ml=\)</td>
+            <td>\(10^{-6}\)</td>
+            <td>\(10^{-3}\)</td>
+            <td>\(1\)</td>
+            <td>\(10^{3}\)</td>
+            <td>\(10^{-2}\)</td>
+            <td>\(10^{-1}\)</td>
+            <td>\(1\)</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 
