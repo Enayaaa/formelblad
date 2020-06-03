@@ -18,7 +18,7 @@ class _InstallningarState extends State<Installningar> {
     globals.isDarkMode = _darktheme;
   }
 
-  bool systemDarkOn() {
+  bool isSystemDark() {
     return MediaQuery.of(context).platformBrightness.toString() ==
             Brightness.dark.toString()
         ? true
@@ -41,8 +41,8 @@ class _InstallningarState extends State<Installningar> {
               ),
               child: SwitchListTile(
                 title: Text("Dark theme"),
-                value: systemDarkOn() ? true : _darktheme,
-                onChanged: systemDarkOn()
+                value: isSystemDark() ? true : _darktheme,
+                onChanged: isSystemDark()
                     ? null
                     : (bool value) => setState(() {
                           _darktheme = value;

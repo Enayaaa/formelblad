@@ -61,6 +61,8 @@ class _UtforskaState extends State<Utforska> {
                           ),
                           body: TeXView(
                             teXHTML: _html,
+                            renderingEngine: RenderingEngine.Katex,
+                            loadingWidget: texLoadingWidget(),
                           ),
                         );
                       },
@@ -84,6 +86,23 @@ class _UtforskaState extends State<Utforska> {
     }
 
     return list;
+  }
+
+  Widget texLoadingWidget() {
+    return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  CircularProgressIndicator(),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text("Räknar ut saker...")
+                ],
+              ),
+            );
   }
 
   List<Widget> _getAmneChildren(String title, Map data) {
