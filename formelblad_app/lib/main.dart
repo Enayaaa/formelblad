@@ -10,6 +10,7 @@ void main() async {
   bool _useDark = globals.prefs.getBool("darktheme") ?? false;
   globals.prefs.getStringList("searchhistory") ??
       globals.prefs.setStringList("searchhistory", []);
+  print("TEst");
   runApp(MyApp(useDark: _useDark));
 }
 
