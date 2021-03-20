@@ -19,8 +19,7 @@ class _InstallningarState extends State<Installningar> {
   }
 
   bool isSystemDark() {
-    return MediaQuery.of(context).platformBrightness.toString() ==
-            Brightness.dark.toString()
+    return MediaQuery.of(context).platformBrightness == Brightness.dark
         ? true
         : false;
   }
